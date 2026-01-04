@@ -1,23 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Question, QuestionType } from "../types";
 
 interface Props {
   questions: Question[];
+  initialProgress?: {
+    questions: Question[];
+    currentIndex: number;
+    selectedOption: any;
+    isAnswered: boolean;
+    score: number;
+  } | null;
+  onProgressSave?: (
+    progress: {
+      questions: Question[];
+      currentIndex: number;
+      selectedOption: any;
+      isAnswered: boolean;
+      score: number;
+    } | null
+  ) => void;
   onFinish: (score: number, total: number) => void;
   onExit: () => void;
 }
 
 export const QuizRunner: React.FC<Props> = ({
   questions,
+  initialProgress,
+  onProgressSave,
   onFinish,
   onExit,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState<any>(null);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [score, setScore] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(
+    initialProgress?.currentIndex ?? 0
+  );
+  const [selectedOption, setSelectedOption] = useState<any>(
+    initialProgress?.selectedOption ?? null
+  );
+  const [isAnswered, setIsAnswered] = useState(
+    initialProgress?.isAnswered ?? false
+  );
+  const [score, setScore] = useState(initialProgress?.score ?? 0);
 
   const currentQ = questions[currentIndex];
+
+  // Persist progress whenever state changes
+  useEffect(() => {
+    if (!onProgressSave) return;
+    onProgressSave({
+      questions,
+      currentIndex,
+      selectedOption,
+      isAnswered,
+      score,
+    });
+  }, [
+    questions,
+    currentIndex,
+    selectedOption,
+    isAnswered,
+    score,
+    onProgressSave,
+  ]);
 
   const handleOptionSelect = (option: any) => {
     if (isAnswered) return;
@@ -44,6 +87,7 @@ export const QuizRunner: React.FC<Props> = ({
       setSelectedOption(null);
       setIsAnswered(false);
     } else {
+      onProgressSave?.(null);
       onFinish(score, questions.length);
     }
   };
@@ -54,17 +98,17 @@ export const QuizRunner: React.FC<Props> = ({
     <div className="max-w-3xl mx-auto">
       {/* Header / Progress */}
       <div className="mb-6 flex justify-between items-center">
-        <span className="text-sm font-medium text-slate-500">
+        <span className="text-sm font-medium text-slate-500 dark:text-slate-300">
           Question {currentIndex + 1} of {questions.length}
         </span>
         <button
           onClick={onExit}
-          className="text-sm text-red-600 hover:text-red-800 font-medium"
+          className="text-sm text-red-600 hover:text-red-800 dark:text-red-300 dark:hover:text-red-200 font-medium"
         >
           Exit Quiz
         </button>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 mb-8">
+      <div className="w-full bg-gray-200 dark:bg-slate-800 rounded-full h-2.5 mb-8">
         <div
           className="bg-emerald-600 h-2.5 rounded-full"
           style={{ width: `${progress}%` }}
@@ -72,11 +116,11 @@ export const QuizRunner: React.FC<Props> = ({
       </div>
 
       {/* Question Card */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
-        <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold mb-4">
+      <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8 mb-6 border border-slate-200 dark:border-slate-800">
+        <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-200 text-xs font-bold mb-4">
           {currentQ.source || "General"}
         </span>
-        <h2 className="text-xl font-bold text-slate-900 mb-6">
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
           {currentQ.question}
         </h2>
 
@@ -91,13 +135,13 @@ export const QuizRunner: React.FC<Props> = ({
                   selectedOption === idx
                     ? isAnswered
                       ? idx === currentQ.correctAnswer
-                        ? "border-green-500 bg-green-50"
-                        : "border-red-500 bg-red-50"
-                      : "border-emerald-600 bg-emerald-50"
-                    : "border-slate-200 hover:border-slate-300"
+                        ? "border-green-500 bg-green-50 dark:bg-green-900/40"
+                        : "border-red-500 bg-red-50 dark:bg-red-900/40"
+                      : "border-emerald-600 bg-emerald-50 dark:bg-emerald-900/30"
+                    : "border-slate-200 hover:border-slate-300 dark:border-slate-700 dark:hover:border-slate-600"
                 } ${
                   isAnswered && idx === currentQ.correctAnswer
-                    ? "border-green-500 bg-green-50"
+                    ? "border-green-500 bg-green-50 dark:bg-green-900/40"
                     : ""
                 }`}
               >
@@ -116,13 +160,13 @@ export const QuizRunner: React.FC<Props> = ({
                     selectedOption === val
                       ? isAnswered
                         ? val === currentQ.correctAnswer
-                          ? "border-green-500 bg-green-50"
-                          : "border-red-500 bg-red-50"
-                        : "border-emerald-600 bg-emerald-50"
-                      : "border-slate-200 hover:border-slate-300"
+                          ? "border-green-500 bg-green-50 dark:bg-green-900/40"
+                          : "border-red-500 bg-red-50 dark:bg-red-900/40"
+                        : "border-emerald-600 bg-emerald-50 dark:bg-emerald-900/30"
+                      : "border-slate-200 hover:border-slate-300 dark:border-slate-700 dark:hover:border-slate-600"
                   } ${
                     isAnswered && val === currentQ.correctAnswer
-                      ? "border-green-500 bg-green-50"
+                      ? "border-green-500 bg-green-50 dark:bg-green-900/40"
                       : ""
                   }`}
                 >
@@ -135,7 +179,7 @@ export const QuizRunner: React.FC<Props> = ({
 
         {/* Feedback Area */}
         {isAnswered && (
-          <div className="mt-6 pt-6 border-t border-slate-100">
+          <div className="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
             <div
               className={`text-lg font-bold mb-2 ${
                 (currentQ.type === QuestionType.MCQ &&
@@ -155,12 +199,14 @@ export const QuizRunner: React.FC<Props> = ({
             </div>
 
             {currentQ.explanation && (
-              <p className="text-slate-600 mb-4">{currentQ.explanation}</p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                {currentQ.explanation}
+              </p>
             )}
 
             <button
               onClick={nextQuestion}
-              className="mt-4 w-full bg-slate-900 text-white px-6 py-2 rounded-md hover:bg-slate-800 transition-colors font-medium"
+              className="mt-4 w-full bg-slate-900 text-white px-6 py-2 rounded-md hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white transition-colors font-medium"
             >
               {currentIndex < questions.length - 1
                 ? "Next Question"
@@ -173,7 +219,7 @@ export const QuizRunner: React.FC<Props> = ({
           <button
             onClick={checkAnswer}
             disabled={selectedOption === null}
-            className="mt-8 w-full bg-emerald-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-8 w-full bg-emerald-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Check Answer
           </button>
