@@ -19,7 +19,12 @@ interface Props {
       score: number;
     } | null
   ) => void;
-  onFinish: (score: number, total: number) => void;
+  onFinish: (
+    score: number,
+    total: number,
+    answeredQuestions: Question[],
+    correctAnswers: Set<string>
+  ) => void;
   onExit: () => void;
 }
 
@@ -40,6 +45,9 @@ export const QuizRunner: React.FC<Props> = ({
     initialProgress?.isAnswered ?? false
   );
   const [score, setScore] = useState(initialProgress?.score ?? 0);
+  const [correctAnswers, setCorrectAnswers] = useState<Set<string>>(
+    new Set((initialProgress as any)?.correctAnswers || [])
+  );
 
   const currentQ = questions[currentIndex];
 
@@ -52,6 +60,7 @@ export const QuizRunner: React.FC<Props> = ({
       selectedOption,
       isAnswered,
       score,
+      correctAnswers: Array.from(correctAnswers),
     });
   }, [
     questions,
@@ -59,6 +68,7 @@ export const QuizRunner: React.FC<Props> = ({
     selectedOption,
     isAnswered,
     score,
+    correctAnswers,
     onProgressSave,
   ]);
 
@@ -78,7 +88,10 @@ export const QuizRunner: React.FC<Props> = ({
       if (selectedOption === currentQ.correctAnswer) isCorrect = true;
     }
 
-    if (isCorrect) setScore(score + 1);
+    if (isCorrect) {
+      setScore(score + 1);
+      setCorrectAnswers((prev) => new Set(prev).add(currentQ.id));
+    }
   };
 
   const nextQuestion = () => {
@@ -88,7 +101,7 @@ export const QuizRunner: React.FC<Props> = ({
       setIsAnswered(false);
     } else {
       onProgressSave?.(null);
-      onFinish(score, questions.length);
+      onFinish(score, questions.length, questions, correctAnswers);
     }
   };
 

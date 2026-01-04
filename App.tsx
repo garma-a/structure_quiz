@@ -8,11 +8,13 @@ import { Question } from "./types";
 
 const App: React.FC = () => {
   type StoredProgress = {
+    lectureId: string;
     questions: Question[];
     currentIndex: number;
     selectedOption: any;
     isAnswered: boolean;
     score: number;
+    correctAnswers: string[];
   };
 
   const [activeQuestions, setActiveQuestions] = useState<Question[] | null>(
@@ -25,77 +27,169 @@ const App: React.FC = () => {
   const [savedProgress, setSavedProgress] = useState<StoredProgress | null>(
     null
   );
+  const [completedQuestions, setCompletedQuestions] = useState<
+    Record<string, Set<string>>
+  >({});
 
   const STORAGE_KEY = "pl-quiz-progress";
+  const COMPLETED_KEY = "pl-quiz-completed";
 
-  // Load saved progress on first mount
+  // Load saved progress and completed questions on first mount
   useEffect(() => {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return;
-    try {
-      const parsed = JSON.parse(raw);
-      if (parsed?.questions?.length) {
-        setSavedProgress(parsed);
-        setActiveQuestions(parsed.questions);
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        if (parsed?.questions?.length) {
+          setSavedProgress(parsed);
+          setActiveQuestions(parsed.questions);
+        }
+      } catch (err) {
+        console.error("Failed to load saved progress", err);
       }
-    } catch (err) {
-      console.error("Failed to load saved progress", err);
+    }
+
+    const completedRaw = localStorage.getItem(COMPLETED_KEY);
+    if (completedRaw) {
+      try {
+        const parsed = JSON.parse(completedRaw);
+        const mapped: Record<string, Set<string>> = {};
+        for (const [lectureId, ids] of Object.entries(parsed)) {
+          mapped[lectureId] = new Set(ids as string[]);
+        }
+        setCompletedQuestions(mapped);
+      } catch (err) {
+        console.error("Failed to load completed questions", err);
+      }
     }
   }, []);
 
   const startPresetQuiz = (id: string) => {
+    // Check if there's saved progress for this lecture
+    if (savedProgress && savedProgress.lectureId === id) {
+      setActiveQuestions(savedProgress.questions);
+      setQuizScore(null);
+      return;
+    }
+
     let q: Question[] = [];
     if (id === "all") {
       q = [...questions];
     } else {
       q = questions.filter((item) => item.lectureId === id);
     }
+
+    // Filter out already completed questions
+    const completed = completedQuestions[id] || new Set();
+    q = q.filter((question) => !completed.has(question.id));
+
     // Shuffle
     q = q.sort(() => Math.random() - 0.5);
+
     if (q.length === 0) {
-      alert("No questions available for this selection yet.");
+      alert("You've completed all questions in this lecture! Great job!");
       return;
     }
+
     setActiveQuestions(q);
     setQuizScore(null);
-    const initialProgress = {
+    const initialProgress: StoredProgress = {
+      lectureId: id,
       questions: q,
       currentIndex: 0,
       selectedOption: null,
       isAnswered: false,
       score: 0,
+      correctAnswers: [],
     };
     setSavedProgress(initialProgress);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(initialProgress));
   };
 
-  const finishQuiz = (score: number, total: number) => {
+  const finishQuiz = (
+    score: number,
+    total: number,
+    answeredQuestions: Question[],
+    correctAnswers: Set<string>
+  ) => {
     setQuizScore({ score, total });
     setActiveQuestions(null);
     setSavedProgress(null);
     localStorage.removeItem(STORAGE_KEY);
+
+    // Mark correctly answered questions as completed
+    const updated = { ...completedQuestions };
+    answeredQuestions.forEach((q) => {
+      if (correctAnswers.has(q.id)) {
+        if (!updated[q.lectureId]) {
+          updated[q.lectureId] = new Set();
+        }
+        updated[q.lectureId].add(q.id);
+      }
+    });
+    setCompletedQuestions(updated);
+
+    // Persist to localStorage
+    const serialized: Record<string, string[]> = {};
+    for (const [lectureId, ids] of Object.entries(updated)) {
+      serialized[lectureId] = Array.from(ids);
+    }
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(serialized));
   };
 
   const exitQuiz = () => {
+    // Save any correctly answered questions from current session
+    if (savedProgress && savedProgress.correctAnswers.length > 0) {
+      const updated = { ...completedQuestions };
+      const lectureId = savedProgress.lectureId;
+      if (!updated[lectureId]) {
+        updated[lectureId] = new Set();
+      }
+      savedProgress.correctAnswers.forEach((qId) => {
+        updated[lectureId].add(qId);
+      });
+      setCompletedQuestions(updated);
+
+      // Persist to localStorage
+      const serialized: Record<string, string[]> = {};
+      for (const [lid, ids] of Object.entries(updated)) {
+        serialized[lid] = Array.from(ids);
+      }
+      localStorage.setItem(COMPLETED_KEY, JSON.stringify(serialized));
+    }
+
     setActiveQuestions(null);
     setQuizScore(null);
   };
 
-  const handleProgressSave = (progress: StoredProgress | null) => {
+  const handleProgressSave = (
+    progress:
+      | (Omit<StoredProgress, "lectureId"> & { correctAnswers: string[] })
+      | null
+  ) => {
     if (!progress) {
       localStorage.removeItem(STORAGE_KEY);
       setSavedProgress(null);
       return;
     }
-    setSavedProgress(progress);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    const fullProgress: StoredProgress = {
+      ...progress,
+      lectureId: savedProgress?.lectureId || "unknown",
+    };
+    setSavedProgress(fullProgress);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fullProgress));
   };
 
   const resetSavedProgress = () => {
+    // Clear current quiz progress
     localStorage.removeItem(STORAGE_KEY);
     setSavedProgress(null);
     setActiveQuestions(null);
     setQuizScore(null);
+
+    // Clear all completed questions (reset all progress bars)
+    localStorage.removeItem(COMPLETED_KEY);
+    setCompletedQuestions({});
   };
 
   return (
@@ -174,13 +268,25 @@ const App: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {lectures
                   .filter((l) => l.id !== "all")
-                  .map((lecture) => (
-                    <QuizCard
-                      key={lecture.id}
-                      lecture={lecture}
-                      onStart={startPresetQuiz}
-                    />
-                  ))}
+                  .map((lecture) => {
+                    const completed =
+                      completedQuestions[lecture.id] || new Set();
+                    const total = questions.filter(
+                      (q) => q.lectureId === lecture.id
+                    ).length;
+                    const progress =
+                      total > 0 ? (completed.size / total) * 100 : 0;
+                    return (
+                      <QuizCard
+                        key={lecture.id}
+                        lecture={lecture}
+                        onStart={startPresetQuiz}
+                        progress={progress}
+                        completedCount={completed.size}
+                        totalCount={total}
+                      />
+                    );
+                  })}
               </div>
             </div>
           </div>
