@@ -16,6 +16,8 @@ export const questions: Question[] = [
       "It guarantees that the actual parameter will not be changed during the subprogram execution.",
     ],
     correctAnswer: 0,
+    explanation:
+      "Pass-by-value-result copies the value in at call time (allowing modification) and copies the final value back to the actual parameter at return time. This is an implementation model for in-out mode parameters.",
   },
   {
     id: "rem-2",
@@ -31,6 +33,8 @@ export const questions: Question[] = [
       "Static typing allows for more polymorphism than dynamic typing.",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static typing binds types at compile time (before execution) and types cannot change. Dynamic typing binds types at runtime, allowing variables to hold different types during execution.",
   },
   {
     id: "rem-3",
@@ -41,6 +45,8 @@ export const questions: Question[] = [
       "Which of the following languages is an example of a language that supports both procedural and object-oriented programming?",
     options: ["JavaScript", "C", "Java", "Ruby"],
     correctAnswer: 1, // Faithful to PDF exam key
+    explanation:
+      "C supports procedural programming and with extensions (C++) supports OOP. According to the exam key, C is the answer as it can be used procedurally and extended to C++ for OOP.",
   },
   {
     id: "rem-4",
@@ -56,6 +62,8 @@ export const questions: Question[] = [
       "To store activation records for each subprogram call",
     ],
     correctAnswer: 3,
+    explanation:
+      "The runtime stack stores activation records (stack frames) for each subprogram call. Each activation record contains local variables, parameters, return address, and dynamic link.",
   },
   {
     id: "rem-5",
@@ -71,6 +79,8 @@ export const questions: Question[] = [
       "Variables are evaluated only if they are modified.",
     ],
     correctAnswer: 0,
+    explanation:
+      "Lazy evaluation (also called delayed evaluation) means expressions are not evaluated until their values are actually needed. This can improve efficiency by avoiding unnecessary computations.",
   },
   {
     id: "rem-6",
@@ -86,6 +96,8 @@ export const questions: Question[] = [
       "Better support for low-level system programming",
     ],
     correctAnswer: 1,
+    explanation:
+      "Interpreted languages offer easier debugging (can test immediately without recompiling) and better portability (the interpreter handles platform differences). Compiled languages are faster but less portable.",
   },
   {
     id: "rem-7",
@@ -100,20 +112,8 @@ export const questions: Question[] = [
       "The rules governing the relationship between variables of the same type.",
     ],
     correctAnswer: 2,
-  },
-  {
-    id: "rem-8",
-    lectureId: "exam1",
-    type: QuestionType.MCQ,
-    source: "Remedial Exam 2019-2020",
-    question: "Difference between static and dynamic typing?",
-    options: [
-      "Static typing is determined at runtime.",
-      "Static typing allows for more polymorphism.",
-      "Dynamic typing is more efficient.",
-      "In static typing, the type of a variable is fixed at compile time; in dynamic, it can change during runtime.",
-    ],
-    correctAnswer: 3,
+    explanation:
+      "Type equivalence determines when two types are considered the same. There are two approaches: name equivalence (same type name) and structure equivalence (same structure/components).",
   },
   {
     id: "rem-9",
@@ -128,6 +128,8 @@ export const questions: Question[] = [
       "Syntax errors handling",
     ],
     correctAnswer: 0,
+    explanation:
+      "Garbage collection provides automatic memory management by reclaiming memory that is no longer referenced (garbage). This prevents memory leaks and dangling references.",
   },
   {
     id: "rem-10",
@@ -142,6 +144,8 @@ export const questions: Question[] = [
       "Computation is modeled through logical assertions",
     ],
     correctAnswer: 1,
+    explanation:
+      "Imperative programming focuses on HOW to compute using statements that change program state. Control flow is managed via statements (if, while, for) and functions. This contrasts with declarative programming which focuses on WHAT to compute.",
   },
   {
     id: "rem-tf-1",
@@ -171,6 +175,8 @@ export const questions: Question[] = [
     question:
       "In Logic Programming Languages, to prove a goal is true, one must find a chain of inference rules and/or facts.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Logic programming (like Prolog) uses facts and inference rules. To prove a goal, the system searches for a chain of rules and facts that lead to the goal through logical deduction.",
   },
   {
     id: "rem-tf-5",
@@ -179,6 +185,8 @@ export const questions: Question[] = [
     source: "Remedial Exam 2019-2020",
     question: "Size of a dynamic array can change during its lifetime.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Heap-dynamic arrays can change size during their lifetime. They are allocated and deallocated from the heap, allowing flexible sizing (like ArrayList in Java or vectors in C++).",
   },
   {
     id: "rem-tf-6",
@@ -188,6 +196,8 @@ export const questions: Question[] = [
     question:
       "Java does not allow dangling references at all, since there is no explicit pointer in the language.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Java uses references instead of pointers and has garbage collection. When no references point to an object, it's garbage collected. This eliminates dangling references (pointers to deallocated memory).",
   },
 
   // --- 12th Examination 2024 ---
@@ -216,6 +226,8 @@ export const questions: Question[] = [
       "A subprogram __________ describes the interface to and the actions of the subprogram.",
     options: ["abstraction", "definition", "call", "declaration"],
     correctAnswer: 1,
+    explanation:
+      "A subprogram definition includes both the interface (header with parameters) and the body (actions). A declaration only provides the interface; a call invokes it; abstraction is the concept it provides.",
   },
   {
     id: "exam12-3",
@@ -226,6 +238,8 @@ export const questions: Question[] = [
       "In which language are all parameters passed by value, but object parameters are passed by reference?",
     options: ["C", "C++", "Java", "Python"],
     correctAnswer: 2,
+    explanation:
+      "In Java, primitives are passed by value (copy of value). Object references are also passed by value, but since the value IS a reference, changes to the object are visible to the caller (effectively pass-by-reference for objects).",
   },
   {
     id: "exam12-tf-1",
@@ -235,6 +249,8 @@ export const questions: Question[] = [
     question:
       "The function prototype is a subprogram’s parameter profile and, if it is a function, its return type.",
     correctAnswer: false,
+    explanation:
+      "FALSE. A function prototype is the subprogram's SIGNATURE (not just parameter profile). The signature includes the name, parameter profile, AND return type.",
   },
   {
     id: "exam12-tf-2",
@@ -243,6 +259,8 @@ export const questions: Question[] = [
     source: "12th Exam 2024",
     question: "Python and Ruby treat methods as first-class objects.",
     correctAnswer: true,
+    explanation:
+      "TRUE. In Python and Ruby, methods are first-class objects - they can be assigned to variables, passed as arguments, returned from functions, and stored in data structures.",
   },
   {
     id: "exam-mix-1",
@@ -258,6 +276,8 @@ export const questions: Question[] = [
       "Dynamic binding",
     ],
     correctAnswer: 1,
+    explanation:
+      "Shallow binding uses the environment of the call statement (where the subprogram is called). Deep binding uses the environment of the definition (where the subprogram is defined). Ad hoc binding uses the environment where the parameter is passed.",
   },
   {
     id: "exam-mix-2",
@@ -273,6 +293,8 @@ export const questions: Question[] = [
       "Displays Access",
     ],
     correctAnswer: 1,
+    explanation:
+      "Deep access searches the activation records on the dynamic chain (call stack) to find variables. Shallow access uses a central table with one entry per variable name, which is faster but more complex to maintain.",
   },
   {
     id: "exam-mix-3",
@@ -287,6 +309,8 @@ export const questions: Question[] = [
       "A function pointer",
     ],
     correctAnswer: 0,
+    explanation:
+      "A closure is a subprogram bundled with its referencing environment (the variables it can access from enclosing scopes). This allows the function to access those variables even after the enclosing scope has ended.",
   },
 
   // --- L1: Introduction ---
@@ -532,22 +556,6 @@ export const questions: Question[] = [
     correctAnswer: false,
     explanation:
       "FALSE. Orthogonality means a RELATIVELY SMALL set of primitive constructs can be combined in a RELATIVELY SMALL NUMBER of ways. Every possible combination is legal. The statement describes the opposite of orthogonality.",
-  },
-  {
-    id: "l1-18",
-    lectureId: "L1",
-    type: QuestionType.MCQ,
-    source: "Lecture 1",
-    question: "What characterizes artificial intelligence programming domains?",
-    options: [
-      "Numeric computations",
-      "Symbolic rather than numeric computations",
-      "Record processing",
-      "System control",
-    ],
-    correctAnswer: 1,
-    explanation:
-      "AI programming is characterized by: (1) Use of symbolic rather than numeric computations, (2) Use of linked lists (rather than arrays), (3) Flexibility - ability to create code and execute on the fly.",
   },
   {
     id: "l1-19",
@@ -3390,22 +3398,6 @@ export const questions: Question[] = [
       "Python uses a colon after the condition followed by indented code for the then-clause: 'if x > 0:\n    print(x)'. No braces or 'then' keyword.",
   },
   {
-    id: "l11-14",
-    lectureId: "L11",
-    type: QuestionType.MCQ,
-    source: "Lecture 11",
-    question: "The dangling else problem involves:",
-    options: [
-      "Missing semicolons",
-      "Ambiguity about which 'if' an 'else' belongs to",
-      "Type errors",
-      "Memory leaks",
-    ],
-    correctAnswer: 1,
-    explanation:
-      "The dangling else is a syntactic ambiguity when an 'else' could belong to multiple nested 'if' statements. Most languages resolve it by matching else to the nearest if.",
-  },
-  {
     id: "l11-15",
     lectureId: "L11",
     type: QuestionType.TF,
@@ -3481,17 +3473,6 @@ export const questions: Question[] = [
       "A posttest loop (like do-while) executes the body first, then checks the condition. This guarantees at least one execution.",
   },
   {
-    id: "l11-20",
-    lectureId: "L11",
-    type: QuestionType.TF,
-    source: "Lecture 11",
-    question:
-      "A counter-controlled loop typically uses an integer loop variable.",
-    correctAnswer: true,
-    explanation:
-      "TRUE. Counter-controlled loops (for loops) use an integer counter that increments through a range of values from initial to terminal value.",
-  },
-  {
     id: "l11-21",
     lectureId: "L11",
     type: QuestionType.MCQ,
@@ -3538,16 +3519,6 @@ export const questions: Question[] = [
     correctAnswer: 1,
     explanation:
       "The 'do-while' loop is a posttest loop - it executes the body first, then tests the condition. The body always executes at least once.",
-  },
-  {
-    id: "l11-24",
-    lectureId: "L11",
-    type: QuestionType.TF,
-    source: "Lecture 11",
-    question: "Guarded commands were proposed by Dijkstra.",
-    correctAnswer: true,
-    explanation:
-      "TRUE. Edsger Dijkstra introduced guarded commands in 1975 for concurrent and nondeterministic programming, supporting formal program verification.",
   },
   {
     id: "l11-25",
@@ -3923,64 +3894,6 @@ export const questions: Question[] = [
       "Pass-by-value-result is an implementation model for in-out parameters. It copies the value in at call time (in mode) and copies it back out at return time (out mode), hence 'in-out'.",
   },
   {
-    id: "l12-21",
-    lectureId: "L12",
-    type: QuestionType.TF,
-    source: "Lecture 12",
-    question: "A generic subprogram takes types as parameters.",
-    correctAnswer: true,
-    explanation:
-      "Generic subprograms (templates in C++, generics in Java) take types as parameters, enabling the same code to work with different types. This is parametric polymorphism.",
-  },
-  {
-    id: "l12-22",
-    lectureId: "L12",
-    type: QuestionType.MCQ,
-    source: "Lecture 12",
-    question: "An activation record contains:",
-    options: [
-      "Only the return address",
-      "The format/layout of the non-code part of an executing subprogram",
-      "Only global variables",
-      "The source code",
-    ],
-    correctAnswer: 1,
-    explanation:
-      "An activation record contains the format/layout of the non-code part of an executing subprogram: local variables, parameters, return address, dynamic link, and temporary storage for expression evaluation.",
-  },
-  {
-    id: "l12-23",
-    lectureId: "L12",
-    type: QuestionType.MCQ,
-    source: "Lecture 12",
-    question: "Static local variables:",
-    options: [
-      "Lose their values between calls",
-      "Retain their values between subprogram calls",
-      "Cannot be accessed",
-      "Are always global",
-    ],
-    correctAnswer: 1,
-    explanation:
-      "Static local variables retain their values between subprogram calls because they are allocated in static memory before execution begins, not on the stack. They persist throughout program execution.",
-  },
-  {
-    id: "l12-24",
-    lectureId: "L12",
-    type: QuestionType.MCQ,
-    source: "Lecture 12",
-    question: "A coroutine has:",
-    options: [
-      "One entry point",
-      "Multiple entry points",
-      "No entry points",
-      "Only one parameter",
-    ],
-    correctAnswer: 1,
-    explanation:
-      "A coroutine has multiple entry points, allowing it to suspend execution and resume from where it left off. This differs from regular subprograms which always start from the beginning.",
-  },
-  {
     id: "l12-25",
     lectureId: "L12",
     type: QuestionType.TF,
@@ -4082,6 +3995,8 @@ export const questions: Question[] = [
       "Parameter passing",
     ],
     correctAnswer: 0,
+    explanation:
+      "Explicit declaration is a mechanism for static binding - the type is bound at compile time by the programmer's declaration. Assignment and input happen at runtime (dynamic).",
   },
   {
     id: "gen-2",
@@ -4096,6 +4011,8 @@ export const questions: Question[] = [
       "Exception handling",
     ],
     correctAnswer: 0,
+    explanation:
+      "Type inference is implicit declaration - the type is determined by the compiler from context (like 'auto' in C++ or 'var' in C#) rather than explicitly stated by the programmer.",
   },
   {
     id: "gen-3",
@@ -4105,6 +4022,8 @@ export const questions: Question[] = [
     question:
       "A named constant is a variable that is bound to a value only when it is bound to storage.",
     correctAnswer: true,
+    explanation:
+      "TRUE. A named constant is bound to a value only once, at the time it is bound to storage. After that, the value cannot be changed during the variable's lifetime.",
   },
   {
     id: "gen-4",
@@ -4114,20 +4033,8 @@ export const questions: Question[] = [
     question: "Which language was the first to implement exception handling?",
     options: ["PL/I", "C", "Fortran", "Basic"],
     correctAnswer: 0,
-  },
-  {
-    id: "gen-5",
-    lectureId: "L7",
-    type: QuestionType.MCQ,
-    source: "Practice",
-    question: 'What is a "mixed-mode" expression?',
-    options: [
-      "An expression with operands of different types",
-      "An expression with both + and -",
-      "An expression with integers only",
-      "An expression in two languages",
-    ],
-    correctAnswer: 0,
+    explanation:
+      "PL/I was the first language to implement exception handling (called ON conditions). It was developed by IBM in the 1960s and introduced many advanced features.",
   },
   {
     id: "gen-6",
@@ -4137,43 +4044,6 @@ export const questions: Question[] = [
     question: "Coercion is an explicit type conversion.",
     correctAnswer: false,
     explanation: "Coercion is implicit; Casting is explicit.",
-  },
-  {
-    id: "gen-7",
-    lectureId: "L11",
-    type: QuestionType.MCQ,
-    source: "Practice",
-    question: 'An "iterator" is a construct used to:',
-    options: [
-      "Traverse the elements of a data structure",
-      "Repeat a calculation",
-      "Calculate factorials",
-      "Define a function",
-    ],
-    correctAnswer: 0,
-  },
-  {
-    id: "gen-8",
-    lectureId: "L12",
-    type: QuestionType.MCQ,
-    source: "Practice",
-    question: "Pass-by-reference simulates parameter passing by transmitting:",
-    options: [
-      "An access path (address)",
-      "The value itself",
-      "The name of the variable",
-      "The type of the variable",
-    ],
-    correctAnswer: 0,
-  },
-  {
-    id: "gen-9",
-    lectureId: "L3",
-    type: QuestionType.MCQ,
-    source: "Practice",
-    question: "A syntax analyzer is also known as a:",
-    options: ["Parser", "Lexer", "Linker", "Loader"],
-    correctAnswer: 0,
   },
   {
     id: "gen-10",
@@ -4188,6 +4058,8 @@ export const questions: Question[] = [
       "Input to Output",
     ],
     correctAnswer: 0,
+    explanation:
+      "A lexical analyzer (lexer/scanner) reads the source code and matches patterns of characters to form tokens (lexemes). Tokens are the smallest meaningful units like keywords, identifiers, and operators.",
   },
   {
     id: "gen-11",
@@ -4198,6 +4070,8 @@ export const questions: Question[] = [
       "Which language is known for its dominance in systems programming (UNIX)?",
     options: ["C", "Pascal", "Ada", "Lisp"],
     correctAnswer: 0,
+    explanation:
+      "C was developed at Bell Labs alongside UNIX and became the dominant language for systems programming. UNIX was largely rewritten in C, demonstrating C's efficiency for low-level programming.",
   },
   {
     id: "gen-12",
@@ -4207,6 +4081,8 @@ export const questions: Question[] = [
     question:
       "Aliasing is considered a dangerous feature because it decreases reliability.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Aliasing (having two or more names for the same memory location) decreases reliability because changes through one name affect all aliases, making code harder to understand and verify.",
   },
   {
     id: "gen-13",
@@ -4221,6 +4097,8 @@ export const questions: Question[] = [
       "In a separate file",
     ],
     correctAnswer: 0,
+    explanation:
+      "In C++, default parameters must appear at the end of the parameter list. This is because arguments are matched left-to-right, so defaults can only fill in from the right.",
   },
   {
     id: "gen-14",
@@ -4235,6 +4113,8 @@ export const questions: Question[] = [
       "The language is fast",
     ],
     correctAnswer: 0,
+    explanation:
+      "Strong typing means type errors are always detected (either at compile time or runtime). A strongly typed language prevents operations on incompatible types.",
   },
   {
     id: "gen-15",
@@ -4245,6 +4125,8 @@ export const questions: Question[] = [
       'The scope of a variable in a "let" expression in functional languages is:',
     options: ["Local to the let expression", "Global", "Undefined", "Dynamic"],
     correctAnswer: 0,
+    explanation:
+      "In functional languages, 'let' creates a local binding. The variable's scope is limited to the let expression body, providing a way to create local variables.",
   },
   {
     id: "gen-16",
@@ -4259,20 +4141,8 @@ export const questions: Question[] = [
       "User-controlled",
     ],
     correctAnswer: 3,
-  },
-  {
-    id: "gen-17",
-    lectureId: "L7",
-    type: QuestionType.MCQ,
-    source: "Practice",
-    question: "What is the precedence of the assignment operator usually?",
-    options: [
-      "Very low",
-      "Very high",
-      "Same as addition",
-      "Same as multiplication",
-    ],
-    correctAnswer: 0,
+    explanation:
+      "Valid loop mechanisms are counter-controlled (for loops), logically-controlled (while/do-while), and data-structure-controlled (iterators). 'User-controlled' is not a standard loop mechanism.",
   },
   {
     id: "gen-18",
@@ -4287,6 +4157,8 @@ export const questions: Question[] = [
       "Compilation",
     ],
     correctAnswer: 0,
+    explanation:
+      "Deep binding uses the environment at the time of procedure definition (where the subprogram is defined). This is consistent with static scoping and closures.",
   },
   {
     id: "gen-19",
@@ -4301,6 +4173,8 @@ export const questions: Question[] = [
       "Compilation",
     ],
     correctAnswer: 0,
+    explanation:
+      "Shallow binding uses the environment at the time of procedure call (where the subprogram is called). This is consistent with dynamic scoping.",
   },
   {
     id: "gen-20",
@@ -4315,5 +4189,7 @@ export const questions: Question[] = [
       "A generic type",
     ],
     correctAnswer: 0,
+    explanation:
+      "A union type can store values of different types at different times, but only one at a time. Unlike a struct/record which stores all fields simultaneously, a union uses the same memory location for different types.",
   },
 ];
