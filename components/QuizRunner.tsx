@@ -211,10 +211,30 @@ export const QuizRunner: React.FC<Props> = ({
                 : "Incorrect"}
             </div>
 
-            {currentQ.explanation && (
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
-                {currentQ.explanation}
+            {/* Always show the correct answer */}
+            <div className="mb-4 p-4 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg border border-emerald-200 dark:border-emerald-800">
+              <p className="font-semibold text-emerald-800 dark:text-emerald-200 mb-1">
+                ✓ Correct Answer:
               </p>
+              <p className="text-emerald-700 dark:text-emerald-300">
+                {currentQ.type === QuestionType.MCQ
+                  ? currentQ.options?.[currentQ.correctAnswer as number]
+                  : currentQ.correctAnswer
+                  ? "TRUE"
+                  : "FALSE"}
+              </p>
+            </div>
+
+            {/* Show explanation if available */}
+            {currentQ.explanation && (
+              <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                <p className="font-semibold text-blue-800 dark:text-blue-200 mb-1">
+                  📚 Explanation:
+                </p>
+                <p className="text-blue-700 dark:text-blue-300">
+                  {currentQ.explanation}
+                </p>
+              </div>
             )}
 
             <button

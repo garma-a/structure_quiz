@@ -304,6 +304,8 @@ export const questions: Question[] = [
       "Better understanding of implementation significance",
     ],
     correctAnswer: 2,
+    explanation:
+      "According to the slides, reasons to study PL concepts include: increased capacity to express ideas, improved background for choosing appropriate languages, increased ability to learn new languages, better understanding of implementation significance, better use of known languages, and overall advancement of computing. Hardware circuit design is NOT a reason listed.",
   },
   {
     id: "l1-2",
@@ -313,6 +315,8 @@ export const questions: Question[] = [
     question: "The first language for scientific applications was:",
     options: ["COBOL", "Fortran", "Lisp", "Ada"],
     correctAnswer: 1,
+    explanation:
+      "Fortran (FORmula TRANslation) was the first high-level programming language, developed in the 1950s specifically for scientific applications involving large floating-point arithmetic computations.",
   },
   {
     id: "l1-3",
@@ -328,6 +332,8 @@ export const questions: Question[] = [
       "Systems Programming",
     ],
     correctAnswer: 2,
+    explanation:
+      "According to the slides, Artificial Intelligence is characterized by the use of symbolic rather than numeric computations; use of linked lists; flexibility (ability to create code and execute on the fly). LISP was the first widely used AI programming language.",
   },
   {
     id: "l1-4",
@@ -338,6 +344,8 @@ export const questions: Question[] = [
       "Which criterion refers to the ease with which a program can be read and understood?",
     options: ["Readability", "Writability", "Reliability", "Cost"],
     correctAnswer: 0,
+    explanation:
+      "Readability is defined as the ease with which programs can be read and understood. It must be considered in the context of the problem domain. The slides state that readability is the most important criterion for judging a programming language.",
   },
   {
     id: "l1-5",
@@ -347,6 +355,8 @@ export const questions: Question[] = [
     question:
       "Orthogonality allows a relatively small set of primitive constructs to be combined in a relatively small number of ways to build the control and data structures.",
     correctAnswer: true,
+    explanation:
+      "This is the definition from the slides: Orthogonality means a relatively small set of primitive constructs can be combined in a relatively small number of ways to build the control and data structures of the language. Every possible combination is legal.",
   },
   {
     id: "l1-6",
@@ -361,6 +371,8 @@ export const questions: Question[] = [
       "Input-Process-Output",
     ],
     correctAnswer: 0,
+    explanation:
+      "The Von Neumann architecture operates on the Fetch-Decode-Execute cycle: fetch an instruction, decode it, and then execute it. This is the fundamental operation cycle of Von Neumann computers.",
   },
   {
     id: "l1-7",
@@ -370,6 +382,8 @@ export const questions: Question[] = [
     question:
       "Pure interpretation generally leads to faster execution speeds than compilation.",
     correctAnswer: false,
+    explanation:
+      "FALSE. Pure interpretation is 10-100 times SLOWER than compiled programs because statements are decoded every time they are executed. Compilation translates source code to machine code once, resulting in faster execution.",
   },
   {
     id: "l1-8",
@@ -384,6 +398,8 @@ export const questions: Question[] = [
       "Hardware Emulation",
     ],
     correctAnswer: 2,
+    explanation:
+      "JIT (Just-In-Time) compilation is a hybrid implementation system. It compiles intermediate language (like Java bytecode) into machine code at runtime, combining benefits of both interpretation (portability) and compilation (speed).",
   },
   {
     id: "l1-9",
@@ -399,6 +415,8 @@ export const questions: Question[] = [
       "Limited language choice",
     ],
     correctAnswer: 0,
+    explanation:
+      "The slides list 'Increased ability to learn new languages' as one of the key reasons to study programming language concepts. Understanding fundamental concepts makes learning new languages easier.",
   },
   {
     id: "l1-10",
@@ -414,6 +432,8 @@ export const questions: Question[] = [
       "Mobile applications",
     ],
     correctAnswer: 1,
+    explanation:
+      "According to the slides, scientific applications were the primary focus in the late 1940s and early 1950s, characterized by simple data structures but large numbers of floating-point arithmetic computations.",
   },
   {
     id: "l1-11",
@@ -423,6 +443,8 @@ export const questions: Question[] = [
     question: "Which language was designed for business data processing?",
     options: ["Fortran", "Lisp", "COBOL", "C"],
     correctAnswer: 2,
+    explanation:
+      "COBOL (COmmon Business-Oriented Language) was specifically designed for business applications. Business applications are characterized by facilities for producing elaborate reports, precise ways of describing and storing decimal numbers and character data.",
   },
   {
     id: "l1-12",
@@ -432,6 +454,8 @@ export const questions: Question[] = [
     question:
       "Before 1970, software development was largely thought of in terms of writing code from the computer's perspective rather than the programmer's perspective.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The slides state that before 1970, software development was largely thought of in terms of writing code, focusing on the computer's perspective. After 1970, the focus shifted to software development methodology and the programmer's perspective.",
   },
   {
     id: "l1-13",
@@ -446,6 +470,8 @@ export const questions: Question[] = [
       "The company size",
     ],
     correctAnswer: 1,
+    explanation:
+      "According to the slides: 'Readability must be considered in the context of the problem domain.' A language suitable for one domain may not be readable in another context.",
   },
   {
     id: "l1-14",
@@ -460,6 +486,8 @@ export const questions: Question[] = [
       "The cost of the compiler",
     ],
     correctAnswer: 0,
+    explanation:
+      "Writability is defined as the ease with which a language can be used to create programs for a chosen problem domain. It is a measure of how easily a language can be used to create programs.",
   },
   {
     id: "l1-15",
@@ -475,6 +503,8 @@ export const questions: Question[] = [
       "Large floating-point computations",
     ],
     correctAnswer: 1,
+    explanation:
+      "Systems programming languages (like C for UNIX) need efficiency because of continuous use. They are used for operating systems and other system-level software where performance is critical.",
   },
   {
     id: "l1-16",
@@ -489,6 +519,8 @@ export const questions: Question[] = [
       "The number of programmers",
     ],
     correctAnswer: 0,
+    explanation:
+      "The slides quote: 'The depth at which people can think is influenced by the expressive power of the language in which they communicate their thoughts.' This applies to programming languages as well.",
   },
   {
     id: "l1-17",
@@ -498,6 +530,8 @@ export const questions: Question[] = [
     question:
       "Orthogonality in a programming language means having many primitive constructs that can only be combined in specific ways.",
     correctAnswer: false,
+    explanation:
+      "FALSE. Orthogonality means a RELATIVELY SMALL set of primitive constructs can be combined in a RELATIVELY SMALL NUMBER of ways. Every possible combination is legal. The statement describes the opposite of orthogonality.",
   },
   {
     id: "l1-18",
@@ -512,6 +546,8 @@ export const questions: Question[] = [
       "System control",
     ],
     correctAnswer: 1,
+    explanation:
+      "AI programming is characterized by: (1) Use of symbolic rather than numeric computations, (2) Use of linked lists (rather than arrays), (3) Flexibility - ability to create code and execute on the fly.",
   },
   {
     id: "l1-19",
@@ -526,6 +562,8 @@ export const questions: Question[] = [
       "Artificial Intelligence",
     ],
     correctAnswer: 2,
+    explanation:
+      "C was developed for systems programming, specifically for the UNIX operating system. Systems programming requires efficiency because of continuous use in OS and utility software.",
   },
   {
     id: "l1-20",
@@ -535,6 +573,8 @@ export const questions: Question[] = [
     question: "Which language was the first widely used for AI applications?",
     options: ["Fortran", "Lisp", "COBOL", "Pascal"],
     correctAnswer: 1,
+    explanation:
+      "LISP (LISt Processing) was the first widely used AI programming language. It was designed for symbolic rather than numeric computations and uses linked lists as its primary data structure.",
   },
   {
     id: "l1-21",
@@ -544,6 +584,8 @@ export const questions: Question[] = [
     question:
       "Reliability in a programming language refers to the program performing to its specifications under all conditions.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The slides define Reliability as: 'A program is said to be reliable if it performs to its specifications under all conditions.' Type checking, exception handling, and aliasing affect reliability.",
   },
   {
     id: "l1-22",
@@ -559,6 +601,8 @@ export const questions: Question[] = [
       "To increase compilation time",
     ],
     correctAnswer: 1,
+    explanation:
+      "Understanding implementation details helps programmers understand why a language feature was designed the way it was, and find and fix certain kinds of bugs that arise from implementation issues.",
   },
   {
     id: "l1-23",
@@ -574,6 +618,8 @@ export const questions: Question[] = [
       "Binary code",
     ],
     correctAnswer: 2,
+    explanation:
+      "Web software uses scripting languages like JavaScript (client-side) and PHP (server-side) embedded in HTML documents. The slides mention JavaScript and PHP as common web programming languages.",
   },
   {
     id: "l1-24",
@@ -589,6 +635,8 @@ export const questions: Question[] = [
       "Systems Programming",
     ],
     correctAnswer: 2,
+    explanation:
+      "The slides discuss: Scientific Applications, Business Applications, Artificial Intelligence, Systems Programming, and Web Software. Gaming Applications is NOT listed as a separate programming domain in the lecture.",
   },
   {
     id: "l1-25",
@@ -598,6 +646,8 @@ export const questions: Question[] = [
     question:
       "Cost is one of the language evaluation criteria that includes training programmers and maintaining programs.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The slides list Cost as an evaluation criterion including: training programmers to use the language, writing programs, compiling programs, executing programs, language implementation system (cost of free compilers?), reliability (cost of poor reliability), and maintaining programs.",
   },
   {
     id: "l1-26",
@@ -613,6 +663,8 @@ export const questions: Question[] = [
       "Pointer manipulation",
     ],
     correctAnswer: 1,
+    explanation:
+      "According to the slides, business applications are characterized by: facilities for producing elaborate reports, precise ways of describing and storing decimal numbers and character data. COBOL was designed for these needs.",
   },
   {
     id: "l1-27",
@@ -627,6 +679,8 @@ export const questions: Question[] = [
       "Reduced code functionality",
     ],
     correctAnswer: 1,
+    explanation:
+      "The slides state that studying programming language concepts leads to 'Better use of languages that are already known' - you can utilize features more effectively when you understand the underlying concepts.",
   },
   {
     id: "l1-28",
@@ -642,6 +696,8 @@ export const questions: Question[] = [
       "Object-oriented design",
     ],
     correctAnswer: 1,
+    explanation:
+      "The slides state that scientific applications in the late 1940s and 1950s were characterized by 'simple data structures but large numbers of floating-point arithmetic computations.' Fortran was designed for this purpose.",
   },
   {
     id: "l1-29",
@@ -651,6 +707,8 @@ export const questions: Question[] = [
     question:
       "Programming languages for business applications are characterized by precise ways of describing decimal numbers and character data.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The slides state business applications require 'precise ways of describing and storing decimal numbers and character data' - essential for financial calculations and report generation.",
   },
   {
     id: "l1-30",
@@ -665,6 +723,8 @@ export const questions: Question[] = [
       "Using the oldest languages available",
     ],
     correctAnswer: 1,
+    explanation:
+      "The slides list 'Overall advancement of computing' as a reason to study PL concepts, achieved through well-informed language selection. Choosing the right language for the task advances the field.",
   },
   {
     id: "l1-31",
@@ -680,6 +740,8 @@ export const questions: Question[] = [
       "Social media",
     ],
     correctAnswer: 1,
+    explanation:
+      "Digital computers in the late 1940s and early 1950s were used primarily for scientific applications, involving floating-point arithmetic computations with simple data structures.",
   },
   {
     id: "l1-32",
@@ -688,6 +750,8 @@ export const questions: Question[] = [
     source: "Lecture 1",
     question: "RPG is an example of a business-oriented programming language.",
     correctAnswer: true,
+    explanation:
+      "TRUE. RPG (Report Program Generator) is listed in the slides as an example of a business-oriented programming language, alongside COBOL.",
   },
 
   // --- L2: History ---
@@ -699,6 +763,8 @@ export const questions: Question[] = [
     question: "Which architecture are most imperative languages based on?",
     options: ["Harvard", "Von Neumann", "Dataflow", "Neural"],
     correctAnswer: 1,
+    explanation:
+      "Most imperative languages are based on the Von Neumann architecture, which features memory storing both instructions and data, a CPU with ALU and control unit, and the fetch-decode-execute cycle.",
   },
   {
     id: "l2-2",
@@ -709,6 +775,8 @@ export const questions: Question[] = [
       'Which language introduced the concept of "Write once, run anywhere"?',
     options: ["C++", "Ada", "Java", "Smalltalk"],
     correctAnswer: 2,
+    explanation:
+      "Java introduced 'Write once, run anywhere' (WORA) through its bytecode compilation and JVM execution model. Java programs compile to platform-independent bytecode that runs on any system with a JVM.",
   },
   {
     id: "l2-3",
@@ -719,6 +787,8 @@ export const questions: Question[] = [
       "Which language is considered the ancestor of most modern structured languages?",
     options: ["Fortran", "ALGOL", "COBOL", "Lisp"],
     correctAnswer: 1,
+    explanation:
+      "ALGOL (ALGOrithmic Language) is considered the ancestor of most modern structured languages. It introduced block structure, nested scopes, and was the first language to use BNF for syntax description.",
   },
   {
     id: "l2-4",
@@ -729,6 +799,8 @@ export const questions: Question[] = [
       "Which language was the first to fully support Object-Oriented Programming (OOP)?",
     options: ["Simula 67", "Smalltalk", "C++", "Java"],
     correctAnswer: 1,
+    explanation:
+      "Smalltalk (developed by Alan Kay) was the first language to FULLY support OOP. While Simula 67 introduced classes, Smalltalk made everything an object and fully embraced OOP principles.",
   },
   {
     id: "l2-5",
@@ -738,6 +810,8 @@ export const questions: Question[] = [
     question:
       "LISP is a purely imperative language designed for business applications.",
     correctAnswer: false,
+    explanation:
+      "FALSE. LISP (LISt Processing) is a FUNCTIONAL programming language designed for ARTIFICIAL INTELLIGENCE, not business applications. It uses symbolic computation and linked lists, not imperative programming.",
   },
   {
     id: "l2-6",
@@ -747,6 +821,8 @@ export const questions: Question[] = [
     question: "The first high-level language, Plankalkul, was designed by:",
     options: ["Konrad Zuse", "Grace Hopper", "John Backus", "Alan Turing"],
     correctAnswer: 0,
+    explanation:
+      "Plankalkül was designed by Konrad Zuse in the 1940s. It was the first high-level programming language, though it was never implemented during Zuse's lifetime.",
   },
   {
     id: "l2-7",
@@ -761,6 +837,8 @@ export const questions: Question[] = [
       "Artificial Intelligence",
     ],
     correctAnswer: 2,
+    explanation:
+      "COBOL (COmmon Business-Oriented Language) was designed in 1960 specifically for business data processing applications. It features English-like syntax and excellent file handling capabilities.",
   },
   {
     id: "l2-8",
@@ -775,6 +853,8 @@ export const questions: Question[] = [
       "Niklaus Wirth",
     ],
     correctAnswer: 1,
+    explanation:
+      "Fortran was developed by John Backus at IBM. It was the first widely used high-level programming language (1957). John McCarthy created LISP, Dennis Ritchie created C, and Niklaus Wirth created Pascal.",
   },
   {
     id: "l2-9",
@@ -784,6 +864,8 @@ export const questions: Question[] = [
     question: "What year was Fortran created?",
     options: ["1950", "1957", "1960", "1972"],
     correctAnswer: 1,
+    explanation:
+      "Fortran was created in 1957 by John Backus at IBM. It was the first widely-used high-level programming language for scientific computing.",
   },
   {
     id: "l2-10",
@@ -798,6 +880,8 @@ export const questions: Question[] = [
       "Bjarne Stroustrup",
     ],
     correctAnswer: 1,
+    explanation:
+      "LISP was created by John McCarthy in 1958 at MIT. It was designed for artificial intelligence research and is based on mathematical functions and linked lists.",
   },
   {
     id: "l2-11",
@@ -807,6 +891,8 @@ export const questions: Question[] = [
     question:
       "ALGOL is considered the ancestor of most modern structured languages.",
     correctAnswer: true,
+    explanation:
+      "TRUE. ALGOL (ALGOrithmic Language) introduced block structure, nested scopes, and formal syntax description (BNF). It influenced Pascal, C, Ada, and many other modern languages.",
   },
   {
     id: "l2-12",
@@ -821,6 +907,8 @@ export const questions: Question[] = [
       "Garbage collection",
     ],
     correctAnswer: 1,
+    explanation:
+      "ALGOL introduced block structure and nested scopes, allowing variables to be declared within blocks with local scope. This was revolutionary for structured programming.",
   },
   {
     id: "l2-13",
@@ -830,6 +918,8 @@ export const questions: Question[] = [
     question: "COBOL was designed in which year?",
     options: ["1957", "1958", "1960", "1972"],
     correctAnswer: 2,
+    explanation:
+      "COBOL was designed in 1960 by a committee (CODASYL). Key dates: Fortran (1957), LISP (1958), COBOL (1960), C (1972).",
   },
   {
     id: "l2-14",
@@ -840,6 +930,8 @@ export const questions: Question[] = [
       "Which language was based on mathematical functions and linked lists?",
     options: ["Fortran", "COBOL", "Lisp", "Pascal"],
     correctAnswer: 2,
+    explanation:
+      "LISP is based on mathematical functions (lambda calculus) and linked lists as its primary data structure. The name stands for LISt Processing.",
   },
   {
     id: "l2-15",
@@ -849,6 +941,8 @@ export const questions: Question[] = [
     question:
       "Machine language programs were hardware dependent and very difficult to write.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Machine language consists of binary codes specific to each processor, making programs hardware-dependent and extremely difficult to write, read, and maintain.",
   },
   {
     id: "l2-16",
@@ -863,6 +957,8 @@ export const questions: Question[] = [
       "Bjarne Stroustrup",
     ],
     correctAnswer: 1,
+    explanation:
+      "Pascal was designed by Niklaus Wirth in 1970 for teaching structured programming. Dennis Ritchie created C, John Backus created Fortran, and Bjarne Stroustrup created C++.",
   },
   {
     id: "l2-17",
@@ -872,6 +968,8 @@ export const questions: Question[] = [
     question: "C language was developed at:",
     options: ["IBM", "MIT", "Bell Labs", "Sun Microsystems"],
     correctAnswer: 2,
+    explanation:
+      "C was developed at Bell Labs by Dennis Ritchie in 1972. Bell Labs (AT&T) was also where UNIX was developed.",
   },
   {
     id: "l2-18",
@@ -886,6 +984,8 @@ export const questions: Question[] = [
       "Niklaus Wirth",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dennis Ritchie created C at Bell Labs in 1972. Brian Kernighan co-authored 'The C Programming Language' book with Ritchie. Ken Thompson created B (C's predecessor).",
   },
   {
     id: "l2-19",
@@ -895,6 +995,8 @@ export const questions: Question[] = [
     question: "What year was C language created?",
     options: ["1960", "1970", "1972", "1983"],
     correctAnswer: 2,
+    explanation:
+      "C was created in 1972 at Bell Labs. Timeline: COBOL (1960), Pascal (1970), C (1972), C++ (1983).",
   },
   {
     id: "l2-20",
@@ -903,6 +1005,8 @@ export const questions: Question[] = [
     source: "Lecture 2",
     question: "C language was used to write Unix operating system.",
     correctAnswer: true,
+    explanation:
+      "TRUE. C was specifically designed for systems programming and was used to rewrite the UNIX operating system, making UNIX portable across different hardware platforms.",
   },
   {
     id: "l2-21",
@@ -917,6 +1021,8 @@ export const questions: Question[] = [
       "Mobile applications",
     ],
     correctAnswer: 1,
+    explanation:
+      "Ada was designed for large-scale, safety-critical, reliable systems. It was sponsored by the US Department of Defense for embedded systems in military applications.",
   },
   {
     id: "l2-22",
@@ -926,6 +1032,8 @@ export const questions: Question[] = [
     question: "Which organization sponsored the development of Ada?",
     options: ["IBM", "MIT", "US Department of Defense", "Sun Microsystems"],
     correctAnswer: 2,
+    explanation:
+      "The US Department of Defense (DoD) sponsored Ada development to standardize programming for its embedded systems. The language is named after Ada Lovelace.",
   },
   {
     id: "l2-23",
@@ -935,6 +1043,8 @@ export const questions: Question[] = [
     question: "Ada was created in which year?",
     options: ["1970", "1972", "1980", "1983"],
     correctAnswer: 3,
+    explanation:
+      "Ada was standardized in 1983 (Ada 83). It was designed by Jean Ichbiah's team after winning a DoD competition.",
   },
   {
     id: "l2-24",
@@ -944,6 +1054,8 @@ export const questions: Question[] = [
     question: "Smalltalk demonstrated which programming paradigm?",
     options: ["Procedural", "Functional", "Pure Object-Oriented", "Logic"],
     correctAnswer: 2,
+    explanation:
+      "Smalltalk demonstrated pure Object-Oriented Programming where EVERYTHING is an object, including numbers and classes. It was developed by Alan Kay at Xerox PARC.",
   },
   {
     id: "l2-25",
@@ -953,6 +1065,8 @@ export const questions: Question[] = [
     question: "C++ was created in which year?",
     options: ["1972", "1980", "1983", "1995"],
     correctAnswer: 2,
+    explanation:
+      "C++ was created by Bjarne Stroustrup in 1983 as 'C with Classes'. It added object-oriented features to C including classes, inheritance, and polymorphism.",
   },
   {
     id: "l2-26",
@@ -962,6 +1076,8 @@ export const questions: Question[] = [
     question:
       "C++ is an extension of C that added object-oriented programming features.",
     correctAnswer: true,
+    explanation:
+      "TRUE. C++ was designed as 'C with Classes' by Bjarne Stroustrup, adding OOP features (classes, inheritance, polymorphism, encapsulation) while maintaining backward compatibility with C.",
   },
   {
     id: "l2-27",
@@ -971,6 +1087,8 @@ export const questions: Question[] = [
     question: "Java was created by:",
     options: ["Microsoft", "IBM", "Sun Microsystems", "Bell Labs"],
     correctAnswer: 2,
+    explanation:
+      "Java was created by Sun Microsystems (James Gosling) in 1995. It was later acquired by Oracle. Microsoft created C#, IBM contributed to many languages, Bell Labs created C.",
   },
   {
     id: "l2-28",
@@ -985,6 +1103,8 @@ export const questions: Question[] = [
       "Assembly integration",
     ],
     correctAnswer: 1,
+    explanation:
+      "Java's key features include JVM portability ('write once, run anywhere') and automatic garbage collection. Java deliberately avoided pointers and multiple inheritance for safety.",
   },
   {
     id: "l2-29",
@@ -994,6 +1114,8 @@ export const questions: Question[] = [
     question:
       "Before the 1970s, programs commonly used goto statements making them messy and unstructured.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Before structured programming (1970s), goto statements were common, creating 'spaghetti code' that was difficult to read and maintain. Dijkstra's 'Go To Statement Considered Harmful' paper advocated for structured programming.",
   },
   {
     id: "l2-30",
@@ -1003,6 +1125,8 @@ export const questions: Question[] = [
     question: "Structured programming emerged in which era?",
     options: ["1940s-1950s", "1950s-1960s", "1970s-1980s", "1990s-2000s"],
     correctAnswer: 2,
+    explanation:
+      "Structured programming emerged in the 1970s-1980s, advocating for control structures (if-then-else, loops) instead of goto statements. This era saw languages like Pascal and C.",
   },
   {
     id: "l2-31",
@@ -1012,6 +1136,8 @@ export const questions: Question[] = [
     question: "Pascal was designed in which year?",
     options: ["1960", "1970", "1972", "1983"],
     correctAnswer: 1,
+    explanation:
+      "Pascal was designed in 1970 by Niklaus Wirth. It was created specifically for teaching structured programming and good programming practices.",
   },
   {
     id: "l2-32",
@@ -1026,6 +1152,8 @@ export const questions: Question[] = [
       "Database management",
     ],
     correctAnswer: 1,
+    explanation:
+      "Pascal was primarily designed for teaching structured programming and good programming practices. It emphasized clear, readable code and proper program structure.",
   },
   {
     id: "l2-33",
@@ -1035,6 +1163,8 @@ export const questions: Question[] = [
     question:
       "Lisp uses recursion instead of loops as its primary control structure.",
     correctAnswer: true,
+    explanation:
+      "TRUE. LISP is a functional language that relies heavily on recursion rather than iterative loops. Functions call themselves to process lists and perform computations.",
   },
   {
     id: "l2-34",
@@ -1045,6 +1175,8 @@ export const questions: Question[] = [
       "Which language introduced classes, inheritance, and polymorphism to C?",
     options: ["Java", "C#", "C++", "Objective-C"],
     correctAnswer: 2,
+    explanation:
+      "C++ (originally 'C with Classes') introduced OOP features to C including classes, inheritance, and polymorphism. Created by Bjarne Stroustrup in 1983.",
   },
   {
     id: "l2-35",
@@ -1059,6 +1191,8 @@ export const questions: Question[] = [
       "All of the above",
     ],
     correctAnswer: 1,
+    explanation:
+      "Assembly language used symbolic names (mnemonics) for machine instructions (like ADD, MOV, JMP) instead of binary codes. This made programming easier than machine language.",
   },
   {
     id: "l2-36",
@@ -1068,6 +1202,8 @@ export const questions: Question[] = [
     question:
       "COBOL is known for its English-like syntax designed for business readability.",
     correctAnswer: true,
+    explanation:
+      "TRUE. COBOL was designed with English-like syntax (PERFORM, MOVE, ADD) to be readable by business managers, not just programmers. This was a key design goal.",
   },
   {
     id: "l2-37",
@@ -1082,6 +1218,8 @@ export const questions: Question[] = [
       "Function Transport",
     ],
     correctAnswer: 0,
+    explanation:
+      "Fortran stands for FORmula TRANslation. It was designed to translate mathematical formulas into machine code for scientific computing.",
   },
   {
     id: "l2-38",
@@ -1091,6 +1229,8 @@ export const questions: Question[] = [
     question: "The machine and assembly language era was during:",
     options: ["1930s-1940s", "1940s-1950s", "1950s-1960s", "1960s-1970s"],
     correctAnswer: 1,
+    explanation:
+      "The machine and assembly language era was during the 1940s-1950s, before high-level languages like Fortran (1957) emerged.",
   },
 
   // --- L3: Syntax & Semantics ---
@@ -1102,6 +1242,8 @@ export const questions: Question[] = [
     question: "What does a compiler check first?",
     options: ["Semantics", "Syntax", "Logic", "Runtime errors"],
     correctAnswer: 1,
+    explanation:
+      "A compiler checks syntax first through lexical and syntactic analysis. Only after verifying the program is syntactically correct does it proceed to semantic analysis.",
   },
   {
     id: "l3-2",
@@ -1111,6 +1253,8 @@ export const questions: Question[] = [
     question: "Which notation is commonly used to describe syntax?",
     options: ["UML", "BNF", "XML", "JSON"],
     correctAnswer: 1,
+    explanation:
+      "BNF (Backus-Naur Form) is the most widely used formal notation for describing programming language syntax. It provides a concise and unambiguous way to define grammar rules.",
   },
   {
     id: "l3-3",
@@ -1120,6 +1264,8 @@ export const questions: Question[] = [
     question:
       "Ambiguity in a grammar allows a single sentence to have two or more distinct parse trees.",
     correctAnswer: true,
+    explanation:
+      "TRUE. A grammar is ambiguous if a sentence can have multiple distinct parse trees. This is problematic because different parse trees may lead to different semantic interpretations.",
   },
   {
     id: "l3-4",
@@ -1130,6 +1276,8 @@ export const questions: Question[] = [
       "Which semantics approach describes meaning by showing how statements change the state of a machine?",
     options: ["Axiomatic", "Denotational", "Operational", "Static"],
     correctAnswer: 2,
+    explanation:
+      "Operational semantics describes meaning by simulating execution on an idealized machine, showing how program statements change the machine state step by step.",
   },
   {
     id: "l3-5",
@@ -1139,6 +1287,8 @@ export const questions: Question[] = [
     question: 'In BNF, what does the symbol "::=" mean?',
     options: ["Is equal to", "Is defined as", "Approximates", "Points to"],
     correctAnswer: 1,
+    explanation:
+      "In BNF notation, '::=' means 'is defined as'. It separates the non-terminal being defined (left side) from its definition (right side).",
   },
   {
     id: "l3-6",
@@ -1148,6 +1298,8 @@ export const questions: Question[] = [
     question:
       "Left recursion in a grammar is problematic for top-down parsers.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Left recursion (e.g., A → Aα) causes infinite loops in top-down parsers because they keep trying to expand the same non-terminal without consuming input. The grammar must be rewritten to remove left recursion.",
   },
   {
     id: "l3-7",
@@ -1158,6 +1310,8 @@ export const questions: Question[] = [
       "Which form of semantics uses mathematical logic and preconditions/postconditions?",
     options: ["Operational", "Denotational", "Axiomatic", "Structural"],
     correctAnswer: 2,
+    explanation:
+      "Axiomatic semantics uses mathematical logic with preconditions and postconditions (assertions) to prove program correctness. It's based on Hoare logic: {P}S{Q} where P is precondition, S is statement, Q is postcondition.",
   },
   {
     id: "l3-8",
@@ -1172,6 +1326,8 @@ export const questions: Question[] = [
       "It cannot be parsed",
     ],
     correctAnswer: 1,
+    explanation:
+      "A grammar is ambiguous when a single sentence can be derived in multiple ways, producing different parse trees. This is problematic because different trees may yield different meanings.",
   },
   {
     id: "l3-9",
@@ -1186,6 +1342,8 @@ export const questions: Question[] = [
       "Syntax is for compilers, semantics is for interpreters",
     ],
     correctAnswer: 0,
+    explanation:
+      "Syntax deals with the form/structure of expressions and statements (how they look), while semantics deals with the meaning of those expressions and statements (what they do).",
   },
   {
     id: "l3-10",
@@ -1194,6 +1352,8 @@ export const questions: Question[] = [
     source: "Lecture 3",
     question: "A lexeme is the smallest meaningful unit in a program.",
     correctAnswer: true,
+    explanation:
+      "TRUE. A lexeme is the lowest-level syntactic unit, such as identifiers (sum, index), operators (+, -), keywords (if, while), and literals (42, 'hello').",
   },
   {
     id: "l3-11",
@@ -1203,6 +1363,8 @@ export const questions: Question[] = [
     question: "Which of the following is a lexeme?",
     options: ["sum", "+", "5", "All of the above"],
     correctAnswer: 3,
+    explanation:
+      "All are lexemes: 'sum' is an identifier lexeme, '+' is an operator lexeme, and '5' is a literal lexeme. Lexemes are the actual character sequences in source code.",
   },
   {
     id: "l3-12",
@@ -1217,6 +1379,8 @@ export const questions: Question[] = [
       "Assembly code",
     ],
     correctAnswer: 1,
+    explanation:
+      "Lexical analysis (scanning) reads source code and produces a stream of tokens. Each token represents a lexeme with its category (e.g., identifier, keyword, operator).",
   },
   {
     id: "l3-13",
@@ -1226,6 +1390,8 @@ export const questions: Question[] = [
     question: "A grammar consists of how many components (tuple)?",
     options: ["2", "3", "4", "5"],
     correctAnswer: 2,
+    explanation:
+      "A grammar is a 4-tuple G = (V, T, S, P) where V = variables (non-terminals), T = terminals, S = start symbol, and P = production rules.",
   },
   {
     id: "l3-14",
@@ -1240,6 +1406,8 @@ export const questions: Question[] = [
       "Semantic rules",
     ],
     correctAnswer: 1,
+    explanation:
+      "S is the start symbol (or goal symbol) in the grammar. It's a special non-terminal from which all valid strings in the language can be derived.",
   },
   {
     id: "l3-15",
@@ -1249,6 +1417,8 @@ export const questions: Question[] = [
     question: "What does P represent in a grammar tuple?",
     options: ["Parameters", "Productions (rules)", "Programs", "Parsers"],
     correctAnswer: 1,
+    explanation:
+      "P represents the production rules (or productions). Each rule defines how a non-terminal can be replaced by a sequence of terminals and/or non-terminals.",
   },
   {
     id: "l3-16",
@@ -1258,6 +1428,8 @@ export const questions: Question[] = [
     question:
       "Terminal symbols are the actual symbols that appear in the language.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Terminals are the actual symbols (tokens) that appear in the final program text - like keywords, operators, identifiers. Non-terminals are abstract categories used in grammar rules.",
   },
   {
     id: "l3-17",
@@ -1272,6 +1444,8 @@ export const questions: Question[] = [
       "A semantic analysis",
     ],
     correctAnswer: 0,
+    explanation:
+      "A derivation is a sequence of production rule applications that transforms the start symbol into a sentence. Each step replaces one non-terminal with its production's right-hand side.",
   },
   {
     id: "l3-18",
@@ -1286,6 +1460,8 @@ export const questions: Question[] = [
       "Binary Notation Form",
     ],
     correctAnswer: 1,
+    explanation:
+      "BNF stands for Backus-Naur Form, named after John Backus and Peter Naur who developed it. It was first used to describe ALGOL 60 syntax.",
   },
   {
     id: "l3-19",
@@ -1300,6 +1476,8 @@ export const questions: Question[] = [
       "Curly braces {}",
     ],
     correctAnswer: 1,
+    explanation:
+      "In BNF notation, non-terminals (syntactic categories) are enclosed in angle brackets, e.g., <expression>, <statement>, <identifier>.",
   },
   {
     id: "l3-20",
@@ -1309,6 +1487,8 @@ export const questions: Question[] = [
     question:
       "Context-free grammars (CFG) are used to define syntactic structure.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Context-free grammars are powerful enough to describe the syntactic structure of most programming languages. BNF is a notation for writing CFGs.",
   },
   {
     id: "l3-21",
@@ -1318,6 +1498,8 @@ export const questions: Question[] = [
     question: "Which symbol is used in BNF to separate alternatives?",
     options: ["&", "|", ";", ","],
     correctAnswer: 1,
+    explanation:
+      "The pipe symbol '|' is used in BNF to separate alternatives. For example: <digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9.",
   },
   {
     id: "l3-22",
@@ -1327,6 +1509,8 @@ export const questions: Question[] = [
     question: "A syntax analyzer is also known as a:",
     options: ["Lexer", "Parser", "Compiler", "Interpreter"],
     correctAnswer: 1,
+    explanation:
+      "A syntax analyzer is called a parser. It takes the token stream from the lexer and builds a parse tree according to the grammar rules.",
   },
   {
     id: "l3-23",
@@ -1336,6 +1520,8 @@ export const questions: Question[] = [
     question: "Lexical structure is defined by:",
     options: ["BNF", "Regular expressions", "Parse trees", "Semantic rules"],
     correctAnswer: 1,
+    explanation:
+      "Lexical structure (tokens like identifiers, numbers, keywords) is defined by regular expressions. BNF/CFG is used for syntactic structure, which is more complex.",
   },
   {
     id: "l3-24",
@@ -1344,6 +1530,8 @@ export const questions: Question[] = [
     source: "Lecture 3",
     question: "Natural language descriptions of syntax are often ambiguous.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Natural language (like English) is inherently ambiguous, which is why formal notations like BNF are used to precisely describe programming language syntax.",
   },
   {
     id: "l3-25",
@@ -1358,6 +1546,8 @@ export const questions: Question[] = [
       "To debug programs",
     ],
     correctAnswer: 0,
+    explanation:
+      "Formal grammars provide a precise, mathematical way to recursively define the structure of a language. They eliminate the ambiguity of natural language descriptions.",
   },
   {
     id: "l3-26",
@@ -1368,6 +1558,8 @@ export const questions: Question[] = [
       "Which of the following is an example of syntactically incorrect code?",
     options: ["sum = 3 + 5", "sum = 3 +", "sum = count + 5", "3 = sum"],
     correctAnswer: 1,
+    explanation:
+      "'sum = 3 +' is syntactically incorrect because the + operator is missing its right operand. The grammar rules require an expression on both sides of +.",
   },
   {
     id: "l3-27",
@@ -1378,6 +1570,8 @@ export const questions: Question[] = [
       "Which statement is syntactically correct but semantically meaningless?",
     options: ["sum = 3 + 5", "3 = sum", "sum = 3 +", "sum +"],
     correctAnswer: 1,
+    explanation:
+      "'3 = sum' is syntactically correct (it follows the grammar pattern) but semantically meaningless because you cannot assign a value to a literal number. This is a semantic error.",
   },
   {
     id: "l3-28",
@@ -1387,6 +1581,8 @@ export const questions: Question[] = [
     question:
       "Describing semantics is generally easier than describing syntax.",
     correctAnswer: false,
+    explanation:
+      "FALSE. Describing semantics is harder than describing syntax. Syntax can be formally defined with BNF, but semantics (meaning) is more complex and often requires natural language or complex formal methods.",
   },
   {
     id: "l3-29",
@@ -1401,6 +1597,8 @@ export const questions: Question[] = [
       "Variable types",
     ],
     correctAnswer: 0,
+    explanation:
+      "A parse tree (or syntax tree) represents the hierarchical syntactic structure of a sentence, showing how it was derived from the grammar rules.",
   },
   {
     id: "l3-30",
@@ -1415,6 +1613,8 @@ export const questions: Question[] = [
       "Execution states",
     ],
     correctAnswer: 1,
+    explanation:
+      "Non-terminals (variables) represent syntactic categories like <expression>, <statement>, <identifier>. They are abstract placeholders that get replaced during derivation.",
   },
   {
     id: "l3-31",
@@ -1423,6 +1623,8 @@ export const questions: Question[] = [
     source: "Lecture 3",
     question: "A compiler first checks syntax, then analyzes semantics.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The compilation process starts with lexical analysis, then syntax analysis (parsing), and only then semantic analysis. Syntax must be correct before meaning can be analyzed.",
   },
   {
     id: "l3-32",
@@ -1438,6 +1640,8 @@ export const questions: Question[] = [
       "Neither is valid",
     ],
     correctAnswer: 1,
+    explanation:
+      "Standard operator precedence gives * higher priority than +, so b * c is evaluated first, then added to a. This yields a + (b * c).",
   },
   {
     id: "l3-33",
@@ -1452,6 +1656,8 @@ export const questions: Question[] = [
       "Using natural language",
     ],
     correctAnswer: 0,
+    explanation:
+      "Operational semantics describes meaning by simulating program execution on an abstract machine, tracking how each statement changes the machine's state (memory, registers, etc.).",
   },
   {
     id: "l3-34",
@@ -1466,6 +1672,8 @@ export const questions: Question[] = [
       "Natural language",
     ],
     correctAnswer: 1,
+    explanation:
+      "Denotational semantics defines meaning by mapping programs to mathematical objects (functions). Each program construct denotes a mathematical function that transforms inputs to outputs.",
   },
   {
     id: "l3-35",
@@ -1480,6 +1688,8 @@ export const questions: Question[] = [
       "Tokens",
     ],
     correctAnswer: 1,
+    explanation:
+      "Axiomatic semantics uses mathematical logic with preconditions and postconditions to reason about program correctness. The Hoare triple {P}S{Q} states: if P is true before S, then Q is true after.",
   },
   {
     id: "l3-36",
@@ -1489,6 +1699,8 @@ export const questions: Question[] = [
     question:
       "BNF is a concise and universally accepted notation for syntax description.",
     correctAnswer: true,
+    explanation:
+      "TRUE. BNF (Backus-Naur Form) is universally accepted as a concise, formal notation for describing programming language syntax. It was developed for ALGOL 60 and is still widely used.",
   },
   {
     id: "l3-37",
@@ -1503,6 +1715,8 @@ export const questions: Question[] = [
       "A compiler error",
     ],
     correctAnswer: 0,
+    explanation:
+      "A token is a category or classification for a lexeme. For example, the lexeme 'count' has token type 'identifier', and the lexeme '42' has token type 'integer_literal'.",
   },
   {
     id: "l3-38",
@@ -1517,6 +1731,8 @@ export const questions: Question[] = [
       "Single-level programs only",
     ],
     correctAnswer: 0,
+    explanation:
+      "Recursive grammar rules allow nested structures like expressions inside expressions (e.g., (a + (b * c))). This is essential for complex language constructs.",
   },
   {
     id: "l3-39",
@@ -1526,6 +1742,8 @@ export const questions: Question[] = [
     question:
       "Formal methods are employed to describe syntax precisely because natural language is ambiguous.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Natural language descriptions can be interpreted in multiple ways. Formal methods like BNF provide precise, unambiguous specifications that can be used for parser generation.",
   },
   {
     id: "l3-40",
@@ -1540,6 +1758,8 @@ export const questions: Question[] = [
       "Inherits from",
     ],
     correctAnswer: 1,
+    explanation:
+      "The arrow '→' in a production rule means 'can be replaced by' or 'produces'. For example, <expr> → <term> + <expr> means <expr> can be replaced by <term> + <expr>.",
   },
 
   // --- L5: Names & Binding ---
@@ -1551,6 +1771,8 @@ export const questions: Question[] = [
     question: "Which of the following is NOT an attribute of a variable?",
     options: ["Name", "Address", "Value", "Compilation Time"],
     correctAnswer: 3,
+    explanation:
+      "The six attributes of a variable are: Name, Address (l-value), Value (r-value), Type, Lifetime, and Scope. Compilation Time is not a variable attribute.",
   },
   {
     id: "l5-2",
@@ -1561,6 +1783,8 @@ export const questions: Question[] = [
       "When two or more variable names refer to the same memory location, they are called:",
     options: ["Pointers", "Aliases", "Constants", "Globals"],
     correctAnswer: 1,
+    explanation:
+      "Aliases occur when two or more variable names access the same memory location. This can happen through pointers, reference variables, or union types.",
   },
   {
     id: "l5-3",
@@ -1575,6 +1799,8 @@ export const questions: Question[] = [
       "Virtual Binding",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static binding (early binding) occurs before runtime and remains fixed throughout execution. Examples include binding types at compile time in statically typed languages.",
   },
   {
     id: "l5-4",
@@ -1589,6 +1815,8 @@ export const questions: Question[] = [
       "There is no difference",
     ],
     correctAnswer: 0,
+    explanation:
+      "Keywords are special only in certain contexts. Reserved words cannot be used as user-defined names at all. In Fortran, keywords like REAL could be redefined (REAL = 3.5).",
   },
   {
     id: "l5-5",
@@ -1603,6 +1831,8 @@ export const questions: Question[] = [
       "The time it takes to compile",
     ],
     correctAnswer: 0,
+    explanation:
+      "Lifetime is the time during which a variable is bound to a specific memory cell. It begins at allocation and ends at deallocation.",
   },
   {
     id: "l5-6",
@@ -1617,6 +1847,8 @@ export const questions: Question[] = [
       "Implicit heap-dynamic variables",
     ],
     correctAnswer: 1,
+    explanation:
+      "Stack-dynamic variables are allocated on the runtime stack when their declaration is reached. They are automatically deallocated when the function returns.",
   },
   {
     id: "l5-7",
@@ -1626,6 +1858,8 @@ export const questions: Question[] = [
     question:
       "Explicit heap-dynamic variables are allocated and deallocated by explicit instructions (e.g., new/delete).",
     correctAnswer: true,
+    explanation:
+      "TRUE. Explicit heap-dynamic variables require explicit allocation (new, malloc) and deallocation (delete, free) by the programmer.",
   },
   {
     id: "l5-8",
@@ -1640,6 +1874,8 @@ export const questions: Question[] = [
       "The name of a variable",
     ],
     correctAnswer: 0,
+    explanation:
+      "Storage binding is the association between a variable and a memory cell (address). This binding determines where the variable's value is stored.",
   },
   {
     id: "l5-9",
@@ -1654,6 +1890,8 @@ export const questions: Question[] = [
       "Initializing a variable",
     ],
     correctAnswer: 1,
+    explanation:
+      "Allocation is the process of taking a block of memory from the available pool and binding it to a variable. This creates the storage binding.",
   },
   {
     id: "l5-10",
@@ -1668,6 +1906,8 @@ export const questions: Question[] = [
       "Renaming a variable",
     ],
     correctAnswer: 1,
+    explanation:
+      "Deallocation is the process of releasing memory back to the free pool when a variable's lifetime ends or it's explicitly freed.",
   },
   {
     id: "l5-11",
@@ -1678,6 +1918,8 @@ export const questions: Question[] = [
       "How many categories of scalar variables exist based on their lifetimes?",
     options: ["2", "3", "4", "5"],
     correctAnswer: 2,
+    explanation:
+      "There are 4 categories: Static, Stack-dynamic, Explicit heap-dynamic, and Implicit heap-dynamic. Each has different allocation/deallocation timing.",
   },
   {
     id: "l5-12",
@@ -1692,6 +1934,8 @@ export const questions: Question[] = [
       "When explicitly allocated",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static variables are bound to memory before program execution begins and remain bound until the program terminates. Examples: C/C++ 'static' variables, global variables.",
   },
   {
     id: "l5-13",
@@ -1700,6 +1944,8 @@ export const questions: Question[] = [
     source: "Lecture 5",
     question: "Static variables retain their values between function calls.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Static variables maintain their values across function invocations because they remain bound to the same memory location throughout program execution.",
   },
   {
     id: "l5-14",
@@ -1714,6 +1960,8 @@ export const questions: Question[] = [
       "Flexible allocation",
     ],
     correctAnswer: 2,
+    explanation:
+      "Static variables allow efficient direct addressing because their memory location is fixed and known at compile time. No runtime allocation overhead.",
   },
   {
     id: "l5-15",
@@ -1728,6 +1976,8 @@ export const questions: Question[] = [
       "Type errors at runtime",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static variables cannot support recursion because there's only one memory location per variable. Recursive calls need separate storage for each activation.",
   },
   {
     id: "l5-16",
@@ -1742,6 +1992,8 @@ export const questions: Question[] = [
       "Never automatically",
     ],
     correctAnswer: 1,
+    explanation:
+      "Stack-dynamic variables are allocated when their declaration is elaborated (reached during execution). This happens on the runtime stack.",
   },
   {
     id: "l5-17",
@@ -1751,6 +2003,8 @@ export const questions: Question[] = [
     question:
       "Stack-dynamic variables enable recursion because each call gets its own copy.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Each function call creates a new activation record on the stack with its own copies of local variables, enabling recursive functions to work correctly.",
   },
   {
     id: "l5-18",
@@ -1765,6 +2019,8 @@ export const questions: Question[] = [
       "Never",
     ],
     correctAnswer: 1,
+    explanation:
+      "Stack-dynamic variables are automatically deallocated when the function returns and its activation record is popped from the stack.",
   },
   {
     id: "l5-19",
@@ -1779,6 +2035,8 @@ export const questions: Question[] = [
       "Fastest possible access",
     ],
     correctAnswer: 2,
+    explanation:
+      "Stack-dynamic variables support recursion (each call gets new storage) and allow memory reuse (the same stack space is reused for different function calls).",
   },
   {
     id: "l5-20",
@@ -1793,6 +2051,8 @@ export const questions: Question[] = [
       "Type checking impossible",
     ],
     correctAnswer: 1,
+    explanation:
+      "Stack-dynamic variables have runtime overhead for allocation/deallocation and indirect addressing (accessing via stack pointer offset).",
   },
   {
     id: "l5-21",
@@ -1803,6 +2063,8 @@ export const questions: Question[] = [
       "Explicit heap-dynamic variables are allocated using commands like:",
     options: ["static", "new or malloc", "auto", "register"],
     correctAnswer: 1,
+    explanation:
+      "Explicit heap-dynamic variables are allocated using explicit runtime instructions: 'new' in C++/Java, 'malloc' in C, and freed with 'delete' or 'free'.",
   },
   {
     id: "l5-22",
@@ -1812,6 +2074,8 @@ export const questions: Question[] = [
     question:
       "Explicit heap-dynamic variables can only be referenced through pointer or reference variables.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Heap-allocated objects don't have names; they can only be accessed through pointers or references that store their memory addresses.",
   },
   {
     id: "l5-23",
@@ -1826,6 +2090,8 @@ export const questions: Question[] = [
       "Implicit heap-dynamic variables",
     ],
     correctAnswer: 2,
+    explanation:
+      "Java objects are explicit heap-dynamic: created with 'new', stored on the heap, and accessed through references. However, Java uses garbage collection instead of explicit delete.",
   },
   {
     id: "l5-24",
@@ -1841,6 +2107,8 @@ export const questions: Question[] = [
       "Static arrays",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dynamic data structures like linked lists, trees, and graphs require heap allocation because their size can grow and shrink during execution.",
   },
   {
     id: "l5-25",
@@ -1855,6 +2123,8 @@ export const questions: Question[] = [
       "Limited to integers only",
     ],
     correctAnswer: 1,
+    explanation:
+      "Explicit heap management is error-prone: forgetting to free causes memory leaks; using freed memory creates dangling pointers. This is why many languages use garbage collection.",
   },
   {
     id: "l5-26",
@@ -1869,6 +2139,8 @@ export const questions: Question[] = [
       "On the stack",
     ],
     correctAnswer: 1,
+    explanation:
+      "Implicit heap-dynamic variables are bound to heap storage when assigned values. Languages like JavaScript and Python use this model.",
   },
   {
     id: "l5-27",
@@ -1878,6 +2150,8 @@ export const questions: Question[] = [
     question:
       "In implicit heap-dynamic variables, all attributes (type, size, value) are bound dynamically.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Implicit heap-dynamic variables have all attributes (type, size, value) bound at runtime when values are assigned, providing maximum flexibility.",
   },
   {
     id: "l5-28",
@@ -1893,6 +2167,8 @@ export const questions: Question[] = [
       "Runtime error",
     ],
     correctAnswer: 1,
+    explanation:
+      "JavaScript uses implicit heap-dynamic variables, so a variable can hold any type. When reassigned, it simply references the new value; the old value may be garbage collected.",
   },
   {
     id: "l5-29",
@@ -1907,6 +2183,8 @@ export const questions: Question[] = [
       "No memory overhead",
     ],
     correctAnswer: 2,
+    explanation:
+      "Implicit heap-dynamic variables offer extreme flexibility: the same variable can hold different types at different times. This enables rapid prototyping and generic programming.",
   },
   {
     id: "l5-30",
@@ -1921,6 +2199,8 @@ export const questions: Question[] = [
       "Requires manual memory management",
     ],
     correctAnswer: 1,
+    explanation:
+      "Implicit heap-dynamic variables have significant runtime overhead: type checking at runtime, dynamic memory management, and potential garbage collection pauses.",
   },
   {
     id: "l5-31",
@@ -1930,6 +2210,8 @@ export const questions: Question[] = [
     question:
       "In C99, only the first 63 characters of internal names are significant.",
     correctAnswer: true,
+    explanation:
+      "TRUE. C99 specifies that only the first 63 characters of internal names (local variables, function names) are significant for distinguishing identifiers.",
   },
   {
     id: "l5-32",
@@ -1944,6 +2226,8 @@ export const questions: Question[] = [
       "Limited to 255 characters",
     ],
     correctAnswer: 2,
+    explanation:
+      "In Java and C#, identifiers have no length limit and all characters are significant. This supports descriptive, readable naming conventions.",
   },
   {
     id: "l5-33",
@@ -1958,6 +2242,8 @@ export const questions: Question[] = [
       "An at sign (@)",
     ],
     correctAnswer: 2,
+    explanation:
+      "PHP requires all variable names to start with a dollar sign ($), e.g., $name, $count. This distinguishes variables from other identifiers.",
   },
   {
     id: "l5-34",
@@ -1972,6 +2258,8 @@ export const questions: Question[] = [
       "Local variable",
     ],
     correctAnswer: 1,
+    explanation:
+      "In Ruby, @name indicates an instance variable (belongs to a specific object instance). This convention makes variable scope immediately visible.",
   },
   {
     id: "l5-35",
@@ -1986,6 +2274,8 @@ export const questions: Question[] = [
       "Local variable",
     ],
     correctAnswer: 2,
+    explanation:
+      "In Ruby, @@name indicates a class variable (shared by all instances of a class). Double @ distinguishes it from instance variables (@name).",
   },
   {
     id: "l5-36",
@@ -1995,6 +2285,8 @@ export const questions: Question[] = [
     question:
       "Case sensitivity in names can reduce readability as similar-looking names may refer to different entities.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Case sensitivity (Count vs count vs COUNT being different) can reduce readability and cause confusion. However, many modern languages are case-sensitive.",
   },
   {
     id: "l5-37",
@@ -2004,6 +2296,8 @@ export const questions: Question[] = [
     question: "Fortran allowed up to how many characters in variable names?",
     options: ["1", "6", "31", "Unlimited"],
     correctAnswer: 1,
+    explanation:
+      "Early Fortran limited variable names to 6 characters due to memory constraints. Modern Fortran 90+ allows 31 characters.",
   },
   {
     id: "l5-38",
@@ -2014,6 +2308,8 @@ export const questions: Question[] = [
       "What is the term used for a string of characters that identifies an entity in a program?",
     options: ["Token", "Name", "Lexeme", "Symbol"],
     correctAnswer: 1,
+    explanation:
+      "A name (or identifier) is a string of characters used to identify a program entity like variables, functions, classes, etc.",
   },
 
   // --- L6: Scopes ---
@@ -2030,6 +2326,8 @@ export const questions: Question[] = [
       "User input",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static (lexical) scoping determines variable scope from the program's textual structure. The scope can be determined at compile time by examining the code.",
   },
   {
     id: "l6-2",
@@ -2044,6 +2342,8 @@ export const questions: Question[] = [
       "Compiler settings",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dynamic scoping resolves variable references based on the runtime calling sequence. The most recent declaration in the call chain is used.",
   },
   {
     id: "l6-3",
@@ -2053,6 +2353,8 @@ export const questions: Question[] = [
     question:
       "Variables declared outside any function are generally considered global.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Variables declared outside all functions have global scope - they are visible throughout the entire program from their declaration point onward.",
   },
   {
     id: "l6-4",
@@ -2067,6 +2369,8 @@ export const questions: Question[] = [
       "The set of all active subprograms",
     ],
     correctAnswer: 0,
+    explanation:
+      "The referencing environment is the collection of all names (variables, functions, etc.) that are visible and can be referenced at a particular statement.",
   },
   {
     id: "l6-5",
@@ -2076,6 +2380,8 @@ export const questions: Question[] = [
     question:
       "A block (enclosed in braces) can create a new static scope in C-based languages.",
     correctAnswer: true,
+    explanation:
+      "TRUE. In C, C++, Java, and C#, a block { } creates a new scope. Variables declared inside are local to that block and not visible outside.",
   },
   {
     id: "l6-6",
@@ -2090,6 +2396,8 @@ export const questions: Question[] = [
       "It requires type checking at compile time",
     ],
     correctAnswer: 0,
+    explanation:
+      "Dynamic scoping reduces readability because you cannot determine which variable is referenced by just reading the code - it depends on the runtime call sequence.",
   },
   {
     id: "l6-7",
@@ -2104,6 +2412,8 @@ export const questions: Question[] = [
       "Public, Private, Protected, Internal",
     ],
     correctAnswer: 0,
+    explanation:
+      "Variables are categorized by lifetime as: Static (bound before execution), Stack-dynamic (bound when declaration reached), Explicit heap-dynamic (explicit new/malloc), Implicit heap-dynamic (bound on assignment).",
   },
   {
     id: "l6-8",
@@ -2113,6 +2423,8 @@ export const questions: Question[] = [
     question:
       "In C++, Java, and C#, static modifier on a class variable makes it shared across all objects.",
     correctAnswer: true,
+    explanation:
+      "TRUE. A static class variable is shared by all instances of the class. There's only one copy, unlike instance variables which have one copy per object.",
   },
   {
     id: "l6-9",
@@ -2128,6 +2440,8 @@ export const questions: Question[] = [
       "In registers only",
     ],
     correctAnswer: 1,
+    explanation:
+      "Local variables in these languages are stack-dynamic: allocated on the runtime stack when the function is called and deallocated when it returns.",
   },
   {
     id: "l6-10",
@@ -2138,6 +2452,8 @@ export const questions: Question[] = [
       "In Python and JavaScript, non-primitive objects like lists and dictionaries are stored in:",
     options: ["Stack", "Heap", "Registers", "Static memory"],
     correctAnswer: 1,
+    explanation:
+      "In Python and JavaScript, complex objects (lists, dictionaries, objects) are stored on the heap because they can grow dynamically and have variable size.",
   },
   {
     id: "l6-11",
@@ -2147,6 +2463,8 @@ export const questions: Question[] = [
     question:
       "Python lists are stored in the heap because they are mutable and need flexible memory space.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Python lists can grow/shrink dynamically and are mutable, so they require heap storage which allows flexible memory allocation.",
   },
   {
     id: "l6-12",
@@ -2161,6 +2479,8 @@ export const questions: Question[] = [
       "User input",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static scoping uses the lexical (textual) structure - it searches outward through enclosing scopes in the source code to find variable declarations.",
   },
   {
     id: "l6-13",
@@ -2175,6 +2495,8 @@ export const questions: Question[] = [
       "Declaration order",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dynamic scoping searches through the chain of function calls (activation records) at runtime to find the most recent declaration of a variable.",
   },
   {
     id: "l6-14",
@@ -2184,6 +2506,8 @@ export const questions: Question[] = [
     question:
       "Most modern languages use static scoping rather than dynamic scoping.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Most modern languages (C, C++, Java, Python) use static scoping because it's easier to understand and allows compile-time checking. Dynamic scoping is rare (early Lisp, some shells).",
   },
   {
     id: "l6-15",
@@ -2198,6 +2522,8 @@ export const questions: Question[] = [
       "A global scope",
     ],
     correctAnswer: 1,
+    explanation:
+      "A block { } in C, C++, Java, C# creates a new static scope. Variables declared inside are local to that block.",
   },
   {
     id: "l6-16",
@@ -2212,6 +2538,8 @@ export const questions: Question[] = [
       "The program starts",
     ],
     correctAnswer: 1,
+    explanation:
+      "A variable's lifetime begins when memory is allocated (bound) to it. This may happen at compile time (static) or runtime (dynamic).",
   },
   {
     id: "l6-17",
@@ -2226,6 +2554,8 @@ export const questions: Question[] = [
       "The program terminates",
     ],
     correctAnswer: 1,
+    explanation:
+      "A variable's lifetime ends when its memory is deallocated (released). For stack variables, this happens on function return; for heap variables, when freed.",
   },
   {
     id: "l6-18",
@@ -2234,6 +2564,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Scope and lifetime are the same concept.",
     correctAnswer: false,
+    explanation:
+      "FALSE. Scope is where a variable can be referenced (visibility). Lifetime is when the variable exists in memory. A static local variable has limited scope but program-long lifetime.",
   },
   {
     id: "l6-19",
@@ -2244,6 +2576,8 @@ export const questions: Question[] = [
       "Which implementation method for dynamic scoping searches activation records on the dynamic chain?",
     options: ["Shallow Access", "Deep Access", "Display Access", "Hash Access"],
     correctAnswer: 1,
+    explanation:
+      "Deep Access searches through activation records on the dynamic chain (call stack) to find variable bindings. Shallow Access uses a central table instead.",
   },
   {
     id: "l6-20",
@@ -2253,6 +2587,8 @@ export const questions: Question[] = [
     question: "Local variables in most languages have which scope?",
     options: ["Global", "Static", "Dynamic", "Block"],
     correctAnswer: 3,
+    explanation:
+      "Local variables typically have block scope - they're visible only within the block (function, loop, or { }) where they're declared.",
   },
   {
     id: "l6-21",
@@ -2261,6 +2597,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Global variables are visible throughout the entire program.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Global variables (declared outside all functions) are visible throughout the program, from their declaration point to the end of the program.",
   },
   {
     id: "l6-22",
@@ -2276,6 +2614,8 @@ export const questions: Question[] = [
       "The global declaration",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static scoping uses the closest enclosing scope in the source code. The compiler searches outward through lexically enclosing blocks.",
   },
   {
     id: "l6-23",
@@ -2291,6 +2631,8 @@ export const questions: Question[] = [
       "The global declaration",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dynamic scoping uses the most recent declaration encountered during runtime execution - searching back through the call chain.",
   },
   {
     id: "l6-24",
@@ -2299,6 +2641,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Static scoping can be determined at compile time.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Static scoping is based on the program's textual structure, which is known at compile time. No runtime information is needed.",
   },
   {
     id: "l6-25",
@@ -2308,6 +2652,8 @@ export const questions: Question[] = [
     question:
       "Dynamic scoping requires runtime determination of variable bindings.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Dynamic scoping depends on the calling sequence, which is only known at runtime. Variable bindings cannot be determined until the program executes.",
   },
   {
     id: "l6-26",
@@ -2322,6 +2668,8 @@ export const questions: Question[] = [
       "No external variables",
     ],
     correctAnswer: 1,
+    explanation:
+      "In static scoping, nested functions can access variables from all enclosing (outer) scopes, not just global or local variables.",
   },
   {
     id: "l6-27",
@@ -2336,6 +2684,8 @@ export const questions: Question[] = [
       "Only local variables",
     ],
     correctAnswer: 1,
+    explanation:
+      "The referencing environment at any point includes all names (variables, functions, etc.) that are visible and can be referenced from that location.",
   },
   {
     id: "l6-28",
@@ -2344,6 +2694,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Blocks allow for temporary variables with limited scope.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Blocks { } allow declaring temporary variables that exist only within that block, reducing namespace pollution and improving memory usage.",
   },
   {
     id: "l6-29",
@@ -2358,6 +2710,8 @@ export const questions: Question[] = [
       "Only functional languages",
     ],
     correctAnswer: 1,
+    explanation:
+      "In languages like C/C++ that require forward declarations, declaration order matters - you must declare before use. Other languages like JavaScript hoist declarations.",
   },
   {
     id: "l6-30",
@@ -2372,6 +2726,8 @@ export const questions: Question[] = [
       "A variable is undefined",
     ],
     correctAnswer: 1,
+    explanation:
+      "Shadowing (or hiding) occurs when an inner scope declares a variable with the same name as one in an outer scope, making the outer one inaccessible.",
   },
   {
     id: "l6-31",
@@ -2380,6 +2736,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Shadowing hides the outer variable in the inner scope.",
     correctAnswer: true,
+    explanation:
+      "TRUE. When shadowing occurs, the outer variable is hidden (not visible) within the inner scope. References use the inner variable.",
   },
   {
     id: "l6-32",
@@ -2394,6 +2752,8 @@ export const questions: Question[] = [
       "The largest scope",
     ],
     correctAnswer: 1,
+    explanation:
+      "The innermost (most local) scope takes precedence. When a name is referenced, the search starts from the innermost scope and works outward.",
   },
   {
     id: "l6-33",
@@ -2408,6 +2768,8 @@ export const questions: Question[] = [
       "All modern languages",
     ],
     correctAnswer: 1,
+    explanation:
+      "Dynamic scoping was used in early Lisp dialects and is still used in some shell languages (Bash). Modern languages predominantly use static scoping.",
   },
   {
     id: "l6-34",
@@ -2416,6 +2778,8 @@ export const questions: Question[] = [
     source: "Lecture 6",
     question: "Static scoping makes programs easier to read and understand.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Static scoping improves readability because you can determine which variable is referenced by just reading the code, without needing to trace runtime execution.",
   },
   {
     id: "l6-35",
@@ -2430,6 +2794,8 @@ export const questions: Question[] = [
       "Return values",
     ],
     correctAnswer: 1,
+    explanation:
+      "A closure captures both the function code and its referencing environment (the variables visible at its definition). This allows the function to access those variables later.",
   },
 
   // --- L7: Expressions ---
@@ -2446,6 +2812,8 @@ export const questions: Question[] = [
       "Boolean",
     ],
     correctAnswer: 1,
+    explanation:
+      "A narrowing conversion converts to a smaller type that cannot represent all values of the original type (e.g., double to int). May lose precision or cause overflow.",
   },
   {
     id: "l7-2",
@@ -2460,6 +2828,8 @@ export const questions: Question[] = [
       "The expression is ignored",
     ],
     correctAnswer: 1,
+    explanation:
+      "Short-circuit evaluation stops as soon as the result is known: in 'a && b', if a is false, b is not evaluated; in 'a || b', if a is true, b is not evaluated.",
   },
   {
     id: "l7-3",
@@ -2474,6 +2844,8 @@ export const questions: Question[] = [
       "An operator to take infinite arguments",
     ],
     correctAnswer: 0,
+    explanation:
+      "Operator overloading lets the same operator symbol have different implementations based on operand types. E.g., '+' adds numbers but concatenates strings.",
   },
   {
     id: "l7-4",
@@ -2482,6 +2854,8 @@ export const questions: Question[] = [
     source: "Lecture 7",
     question: "In functional languages, expressions do not have side effects.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Pure functional languages prohibit side effects in expressions. Functions only compute and return values without modifying external state.",
   },
   {
     id: "l7-5",
@@ -2497,6 +2871,8 @@ export const questions: Question[] = [
       "When an error occurs",
     ],
     correctAnswer: 0,
+    explanation:
+      "A side effect is when a function or expression modifies something outside its local scope - like changing a global variable or a parameter passed by reference.",
   },
   {
     id: "l7-6",
@@ -2511,6 +2887,8 @@ export const questions: Question[] = [
       "Only constants",
     ],
     correctAnswer: 1,
+    explanation:
+      "An expression combines operators, operands (variables, constants), parentheses for grouping, and function calls to compute a value.",
   },
   {
     id: "l7-7",
@@ -2519,6 +2897,8 @@ export const questions: Question[] = [
     source: "Lecture 7",
     question: "Every expression has both syntax and semantics.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Syntax defines the form of the expression (how it's written); semantics defines its meaning (what value it produces and how it's evaluated).",
   },
   {
     id: "l7-8",
@@ -2528,6 +2908,8 @@ export const questions: Question[] = [
     question: "Binary operators operate on:",
     options: ["One operand", "Two operands", "Three operands", "Four operands"],
     correctAnswer: 1,
+    explanation:
+      "Binary operators take two operands (e.g., a + b, x * y, m / n). 'Binary' refers to the number of operands, not binary numbers.",
   },
   {
     id: "l7-9",
@@ -2537,6 +2919,8 @@ export const questions: Question[] = [
     question: "Which is an example of a unary operator?",
     options: ["+", "-", "++", "All of the above"],
     correctAnswer: 3,
+    explanation:
+      "All can be unary operators: unary + and - change sign of a single operand; ++ and -- increment/decrement a single operand.",
   },
   {
     id: "l7-10",
@@ -2546,6 +2930,8 @@ export const questions: Question[] = [
     question: "The ternary operator has the form:",
     options: ["a + b + c", "condition ? x : y", "a * b * c", "x && y && z"],
     correctAnswer: 1,
+    explanation:
+      "The ternary operator ?: takes three operands: condition ? value_if_true : value_if_false. It's the only ternary operator in most languages.",
   },
   {
     id: "l7-11",
@@ -2554,6 +2940,8 @@ export const questions: Question[] = [
     source: "Lecture 7",
     question: "In mainstream languages, 5x must be written as 5 * x.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Unlike mathematical notation, most programming languages require explicit multiplication operators. '5x' would be interpreted as an identifier named '5x'.",
   },
   {
     id: "l7-12",
@@ -2568,6 +2956,8 @@ export const questions: Question[] = [
       "Anywhere",
     ],
     correctAnswer: 1,
+    explanation:
+      "Infix notation places operators between operands (e.g., a + b). Prefix puts operators before (+ a b), postfix puts them after (a b +).",
   },
   {
     id: "l7-13",
@@ -2577,6 +2967,8 @@ export const questions: Question[] = [
     question: "In Scheme and Lisp, all operators are:",
     options: ["Infix", "Postfix", "Prefix", "Mixed"],
     correctAnswer: 2,
+    explanation:
+      "Scheme and Lisp use prefix notation with parentheses: (+ a b) instead of a + b. All operators come before their operands.",
   },
   {
     id: "l7-14",
@@ -2591,6 +2983,8 @@ export const questions: Question[] = [
       "Memory allocation",
     ],
     correctAnswer: 0,
+    explanation:
+      "Operator precedence defines the order of operations when different operators appear in an expression without parentheses (e.g., * before +).",
   },
   {
     id: "l7-15",
@@ -2605,6 +2999,8 @@ export const questions: Question[] = [
       "It depends on the language",
     ],
     correctAnswer: 1,
+    explanation:
+      "Multiplication (*) has higher precedence than addition (+) in virtually all languages. So 2 + 3 * 4 = 14, not 20.",
   },
   {
     id: "l7-16",
@@ -2619,6 +3015,8 @@ export const questions: Question[] = [
       "Type conversions",
     ],
     correctAnswer: 1,
+    explanation:
+      "Associativity determines evaluation order when operators of equal precedence appear together. Left-associative: a - b - c = (a - b) - c. Right-associative: a = b = c = a = (b = c).",
   },
   {
     id: "l7-17",
@@ -2627,6 +3025,8 @@ export const questions: Question[] = [
     source: "Lecture 7",
     question: "Most arithmetic operators are left-associative.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Most arithmetic operators (+, -, *, /) are left-associative: a - b - c evaluates as (a - b) - c. Exception: exponentiation is often right-associative.",
   },
   {
     id: "l7-18",
@@ -2641,6 +3041,8 @@ export const questions: Question[] = [
       "Is not allowed",
     ],
     correctAnswer: 1,
+    explanation:
+      "A widening conversion converts to a larger type that can represent all values of the original (e.g., int to double). It's safe and typically done implicitly.",
   },
   {
     id: "l7-19",
@@ -2655,6 +3057,8 @@ export const questions: Question[] = [
       "Type deletion",
     ],
     correctAnswer: 1,
+    explanation:
+      "Coercion is implicit (automatic) type conversion done by the compiler. For example, in '3 + 2.5', the int 3 is coerced to a double.",
   },
   {
     id: "l7-20",
@@ -2669,6 +3073,8 @@ export const questions: Question[] = [
       "Error handling",
     ],
     correctAnswer: 1,
+    explanation:
+      "Casting is explicit type conversion written in code by the programmer, e.g., (int)3.14 in C/C++ or int(3.14) in Python.",
   },
   {
     id: "l7-21",
@@ -2683,6 +3089,8 @@ export const questions: Question[] = [
       "No operands",
     ],
     correctAnswer: 1,
+    explanation:
+      "A mixed-mode (or mixed-type) expression has operands of different types, like '3 + 2.5' (int and double). The language must coerce one type.",
   },
   {
     id: "l7-22",
@@ -2692,6 +3100,8 @@ export const questions: Question[] = [
     question:
       "Short-circuit evaluation evaluates all operands before returning a result.",
     correctAnswer: false,
+    explanation:
+      "FALSE. Short-circuit evaluation does NOT evaluate all operands. It stops early when the result is determined (false && x skips x; true || x skips x).",
   },
   {
     id: "l7-23",
@@ -2706,6 +3116,8 @@ export const questions: Question[] = [
       "The expression causes an error",
     ],
     correctAnswer: 1,
+    explanation:
+      "In 'a && b', if a is false, the entire expression must be false regardless of b. So b is not evaluated (short-circuited).",
   },
   {
     id: "l7-24",
@@ -2720,6 +3132,8 @@ export const questions: Question[] = [
       "No precedence",
     ],
     correctAnswer: 1,
+    explanation:
+      "Assignment (=) has very low precedence so that expressions like 'x = a + b * c' evaluate the right side completely before assigning.",
   },
   {
     id: "l7-25",
@@ -2729,6 +3143,8 @@ export const questions: Question[] = [
     question:
       "Parentheses can be used to override default operator precedence.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Parentheses have the highest precedence and force enclosed expressions to be evaluated first, overriding default precedence rules.",
   },
   {
     id: "l7-26",
@@ -2743,6 +3159,8 @@ export const questions: Question[] = [
       "An error",
     ],
     correctAnswer: 1,
+    explanation:
+      "Postfix i++ returns the original value, then increments. So if i=5, 'x = i++' sets x=5 and i becomes 6.",
   },
   {
     id: "l7-27",
@@ -2757,6 +3175,8 @@ export const questions: Question[] = [
       "An error",
     ],
     correctAnswer: 1,
+    explanation:
+      "Prefix ++i increments first, then returns the new value. So if i=5, 'x = ++i' sets i=6 first, then x=6.",
   },
   {
     id: "l7-28",
@@ -2771,6 +3191,8 @@ export const questions: Question[] = [
       "Always equal",
     ],
     correctAnswer: 0,
+    explanation:
+      "Languages differ: in some, -2^2 = (-2)^2 = 4 (unary minus higher precedence); in others, -2^2 = -(2^2) = -4 (exponentiation higher).",
   },
   {
     id: "l7-29",
@@ -2780,6 +3202,8 @@ export const questions: Question[] = [
     question:
       "Operator overloading allows an operator to have multiple meanings based on operand types.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Operator overloading lets the same operator symbol perform different operations based on operand types (e.g., + for numbers vs. strings).",
   },
   {
     id: "l7-30",
@@ -2789,6 +3213,8 @@ export const questions: Question[] = [
     question: "Which languages commonly support operator overloading?",
     options: ["C and Java", "C++ and Python", "Assembly only", "No languages"],
     correctAnswer: 1,
+    explanation:
+      "C++ and Python allow user-defined operator overloading. C doesn't support it; Java only has built-in overloading (e.g., + for String concatenation).",
   },
 
   // --- L11: Control Structures ---
@@ -2800,6 +3226,8 @@ export const questions: Question[] = [
     question: 'The "Dangling Else" problem arises in which type of statement?',
     options: ["Switch", "Nested If-Else", "While Loop", "For Loop"],
     correctAnswer: 1,
+    explanation:
+      "The dangling else problem occurs in nested if-else statements when it's ambiguous which 'if' an 'else' belongs to. Most languages match else with the nearest unmatched if.",
   },
   {
     id: "l11-2",
@@ -2809,6 +3237,8 @@ export const questions: Question[] = [
     question: "Which loop checks the condition *after* the body executes?",
     options: ["Pretest Loop", "Posttest Loop", "For Loop", "Counter Loop"],
     correctAnswer: 1,
+    explanation:
+      "A posttest loop (like do-while) executes the body first, then checks the condition. This guarantees at least one execution of the loop body.",
   },
   {
     id: "l11-3",
@@ -2818,6 +3248,8 @@ export const questions: Question[] = [
     question: "Guarded commands were proposed by:",
     options: ["Dijkstra", "Turing", "Von Neumann", "Knuth"],
     correctAnswer: 0,
+    explanation:
+      "Edsger Dijkstra proposed guarded commands as a way to introduce nondeterminism in programming, supporting verification and formal reasoning about programs.",
   },
   {
     id: "l11-4",
@@ -2833,6 +3265,8 @@ export const questions: Question[] = [
       "To terminate the program",
     ],
     correctAnswer: 0,
+    explanation:
+      "The selector is the expression whose value is matched against case labels to determine which branch of the switch statement to execute.",
   },
   {
     id: "l11-5",
@@ -2842,6 +3276,8 @@ export const questions: Question[] = [
     question:
       "In a counter-controlled loop (for loop), the loop variable is typically an integer.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Counter-controlled loops typically use an integer loop variable that starts at an initial value, is incremented each iteration, and stops at a terminal value.",
   },
   {
     id: "l11-6",
@@ -2857,6 +3293,8 @@ export const questions: Question[] = [
       "How much memory does it consume?",
     ],
     correctAnswer: 3,
+    explanation:
+      "Design issues for selection statements include expression form/type, clause specification, and handling nested selectors. Memory consumption is not a design issue for selection statements.",
   },
   {
     id: "l11-7",
@@ -2871,6 +3309,8 @@ export const questions: Question[] = [
       "Import libraries",
     ],
     correctAnswer: 1,
+    explanation:
+      "Selection statements (if, switch) allow programs to choose between different execution paths based on the value of a condition or expression.",
   },
   {
     id: "l11-8",
@@ -2880,6 +3320,8 @@ export const questions: Question[] = [
     question:
       "Böhm and Jacopini proved that any algorithm can be written using only sequence, selection, and iteration.",
     correctAnswer: true,
+    explanation:
+      "TRUE. The Böhm-Jacopini theorem (1966) proved that any computable function can be computed by a program using only sequence, selection (if-then-else), and iteration (loops).",
   },
   {
     id: "l11-9",
@@ -2894,6 +3336,8 @@ export const questions: Question[] = [
       "Unlimited paths",
     ],
     correctAnswer: 1,
+    explanation:
+      "A two-way selection (if-else) has exactly two paths: the 'then' clause executed when condition is true, and the 'else' clause when false.",
   },
   {
     id: "l11-10",
@@ -2904,6 +3348,8 @@ export const questions: Question[] = [
       "In C/Java/C++, are parentheses required around the control expression?",
     options: ["No", "Yes", "Sometimes", "Only for strings"],
     correctAnswer: 1,
+    explanation:
+      "Yes, in C, Java, and C++, parentheses are required around the control expression in if/while statements: if (condition) { ... }.",
   },
   {
     id: "l11-11",
@@ -2918,6 +3364,8 @@ export const questions: Question[] = [
       "Always needed",
     ],
     correctAnswer: 1,
+    explanation:
+      "Ruby uses 'then' (or newline) to separate the condition from the body, making parentheses optional: 'if x > 5 then puts x end'.",
   },
   {
     id: "l11-12",
@@ -2927,6 +3375,8 @@ export const questions: Question[] = [
     question:
       "Modern languages like Java and C# only allow Boolean expressions in control statements.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Java and C# require Boolean expressions in if/while conditions. Unlike C, you cannot use integers (0 = false, non-zero = true).",
   },
   {
     id: "l11-13",
@@ -2936,6 +3386,8 @@ export const questions: Question[] = [
     question: "In Python, the then-clause is indicated by:",
     options: ["then keyword", "Colon and indentation", "Braces", "Parentheses"],
     correctAnswer: 1,
+    explanation:
+      "Python uses a colon after the condition followed by indented code for the then-clause: 'if x > 0:\n    print(x)'. No braces or 'then' keyword.",
   },
   {
     id: "l11-14",
@@ -2950,6 +3402,8 @@ export const questions: Question[] = [
       "Memory leaks",
     ],
     correctAnswer: 1,
+    explanation:
+      "The dangling else is a syntactic ambiguity when an 'else' could belong to multiple nested 'if' statements. Most languages resolve it by matching else to the nearest if.",
   },
   {
     id: "l11-15",
@@ -2959,6 +3413,8 @@ export const questions: Question[] = [
     question:
       "Indentation alone does NOT affect semantics in most languages like C and Java.",
     correctAnswer: true,
+    explanation:
+      "TRUE. In C, Java, and C++, indentation is purely cosmetic - only braces define blocks. Misleading indentation doesn't change program behavior (unlike Python).",
   },
   {
     id: "l11-16",
@@ -2973,6 +3429,8 @@ export const questions: Question[] = [
       "The last if in the file",
     ],
     correctAnswer: 1,
+    explanation:
+      "Most languages use the 'nearest if' rule: an else is associated with the closest preceding if that doesn't already have an else.",
   },
   {
     id: "l11-17",
@@ -2987,6 +3445,8 @@ export const questions: Question[] = [
       "Boolean only",
     ],
     correctAnswer: 1,
+    explanation:
+      "A switch statement uses a selector expression whose value is matched against case labels to determine which code path to execute.",
   },
   {
     id: "l11-18",
@@ -3001,6 +3461,8 @@ export const questions: Question[] = [
       "In the middle of the body",
     ],
     correctAnswer: 1,
+    explanation:
+      "A pretest loop (like while) checks the condition before each iteration. If the condition is initially false, the body never executes.",
   },
   {
     id: "l11-19",
@@ -3015,6 +3477,8 @@ export const questions: Question[] = [
       "Only on errors",
     ],
     correctAnswer: 1,
+    explanation:
+      "A posttest loop (like do-while) executes the body first, then checks the condition. This guarantees at least one execution.",
   },
   {
     id: "l11-20",
@@ -3024,6 +3488,8 @@ export const questions: Question[] = [
     question:
       "A counter-controlled loop typically uses an integer loop variable.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Counter-controlled loops (for loops) use an integer counter that increments through a range of values from initial to terminal value.",
   },
   {
     id: "l11-21",
@@ -3038,6 +3504,8 @@ export const questions: Question[] = [
       "Unstructured loop",
     ],
     correctAnswer: 1,
+    explanation:
+      "The 'for' loop is typically a counter-controlled loop: it initializes a counter, tests a condition, and updates the counter each iteration.",
   },
   {
     id: "l11-22",
@@ -3052,6 +3520,8 @@ export const questions: Question[] = [
       "None of the above",
     ],
     correctAnswer: 1,
+    explanation:
+      "The 'while' loop is a pretest loop - it evaluates the condition before each iteration. If condition is false initially, the body never executes.",
   },
   {
     id: "l11-23",
@@ -3066,6 +3536,8 @@ export const questions: Question[] = [
       "Selection statement",
     ],
     correctAnswer: 1,
+    explanation:
+      "The 'do-while' loop is a posttest loop - it executes the body first, then tests the condition. The body always executes at least once.",
   },
   {
     id: "l11-24",
@@ -3074,6 +3546,8 @@ export const questions: Question[] = [
     source: "Lecture 11",
     question: "Guarded commands were proposed by Dijkstra.",
     correctAnswer: true,
+    explanation:
+      "TRUE. Edsger Dijkstra introduced guarded commands in 1975 for concurrent and nondeterministic programming, supporting formal program verification.",
   },
   {
     id: "l11-25",
@@ -3088,6 +3562,8 @@ export const questions: Question[] = [
       "Compile code",
     ],
     correctAnswer: 1,
+    explanation:
+      "An iterator provides a way to access elements of a collection sequentially without exposing the underlying structure. Used in for-each loops.",
   },
   {
     id: "l11-26",
@@ -3097,6 +3573,8 @@ export const questions: Question[] = [
     question: "Control expressions in modern languages should be:",
     options: ["Strings only", "Boolean type", "Any type", "Integers only"],
     correctAnswer: 1,
+    explanation:
+      "Modern languages like Java and C# require Boolean expressions in control statements for type safety and clarity, unlike C which allowed integers.",
   },
   {
     id: "l11-27",
@@ -3106,6 +3584,8 @@ export const questions: Question[] = [
     question:
       "In C89, there was no Boolean type, so arithmetic expressions were used for conditions.",
     correctAnswer: true,
+    explanation:
+      "TRUE. C89 had no Boolean type; zero was false, any non-zero value was true. C99 added _Bool and stdbool.h for explicit Boolean support.",
   },
   {
     id: "l11-28",
@@ -3120,6 +3600,8 @@ export const questions: Question[] = [
       "On one line",
     ],
     correctAnswer: 1,
+    explanation:
+      "Perl requires compound statements (braces) for both then and else clauses, which eliminates the dangling else problem.",
   },
   {
     id: "l11-29",
@@ -3129,6 +3611,8 @@ export const questions: Question[] = [
     question: "Python uses what to delimit blocks instead of braces?",
     options: ["Semicolons", "Indentation", "Parentheses", "Keywords only"],
     correctAnswer: 1,
+    explanation:
+      "Python uses indentation (whitespace) to delimit code blocks instead of braces. This enforces readable, consistent code structure.",
   },
   {
     id: "l11-30",
@@ -3143,6 +3627,8 @@ export const questions: Question[] = [
       "Random chance",
     ],
     correctAnswer: 1,
+    explanation:
+      "Logically-controlled loops (like while) continue based on a Boolean condition. Unlike counter-controlled loops, they don't have a predetermined number of iterations.",
   },
 
   // --- L12: Subprograms ---
@@ -3160,6 +3646,8 @@ export const questions: Question[] = [
       "Pass-by-Result",
     ],
     correctAnswer: 1,
+    explanation:
+      "Pass-by-value copies the actual parameter's value to the formal parameter at call time. Changes to the formal parameter do not affect the actual parameter. This is an implementation model for 'in mode' parameters.",
   },
   {
     id: "l12-2",
@@ -3169,6 +3657,8 @@ export const questions: Question[] = [
     question: "A coroutine is a subprogram that has multiple:",
     options: ["Parameters", "Return values", "Entry points", "Names"],
     correctAnswer: 2,
+    explanation:
+      "A coroutine has multiple entry points, allowing it to suspend and resume execution at various points. Unlike regular subprograms that run to completion, coroutines can yield control and be reactivated later.",
   },
   {
     id: "l12-3",
@@ -3179,6 +3669,8 @@ export const questions: Question[] = [
       "Which local variables retain their values between subprogram calls?",
     options: ["Stack-dynamic", "Static", "Heap-dynamic", "Transient"],
     correctAnswer: 1,
+    explanation:
+      "Static local variables are bound to storage before execution begins and retain their values between subprogram calls. Unlike stack-dynamic locals, they are not created/destroyed with each call.",
   },
   {
     id: "l12-4",
@@ -3193,6 +3685,8 @@ export const questions: Question[] = [
       "The source code of the function",
     ],
     correctAnswer: 0,
+    explanation:
+      "An activation record (also called stack frame) is the format/layout of the non-code part of an executing subprogram. It typically contains local variables, parameters, return address, and dynamic link.",
   },
   {
     id: "l12-5",
@@ -3208,6 +3702,8 @@ export const questions: Question[] = [
       "Pass-by-Name",
     ],
     correctAnswer: 2,
+    explanation:
+      "Pass-by-value-result (also called pass-by-copy) combines pass-by-value (copying in at call) and pass-by-result (copying out at return). It's an implementation model for in-out mode parameters.",
   },
   {
     id: "l12-6",
@@ -3216,6 +3712,8 @@ export const questions: Question[] = [
     source: "Lecture 12",
     question: "A generic subprogram takes types as parameters.",
     correctAnswer: true,
+    explanation:
+      "Generic subprograms (like C++ templates or Java generics) take types as parameters, allowing the same code to work with different types. This is called parametric polymorphism.",
   },
   {
     id: "l12-7",
@@ -3230,6 +3728,8 @@ export const questions: Question[] = [
       "The ability to return multiple values",
     ],
     correctAnswer: 0,
+    explanation:
+      "Polymorphism allows a subprogram to accept parameters of different types on different activations. This includes ad-hoc polymorphism (overloading), subtype polymorphism (inheritance), and parametric polymorphism (generics).",
   },
   {
     id: "l12-8",
@@ -3244,6 +3744,8 @@ export const questions: Question[] = [
       "File abstraction",
     ],
     correctAnswer: 1,
+    explanation:
+      "Subprograms provide process abstraction - a way to specify a computation without the implementation details being visible to the caller. The caller only needs to know what the subprogram does, not how.",
   },
   {
     id: "l12-9",
@@ -3252,6 +3754,8 @@ export const questions: Question[] = [
     source: "Lecture 12",
     question: "Most subprograms have a single entry point.",
     correctAnswer: true,
+    explanation:
+      "Most subprograms have a single entry point - execution begins at the first statement and proceeds sequentially. Coroutines are an exception, having multiple entry points for suspend/resume.",
   },
   {
     id: "l12-10",
@@ -3266,6 +3770,8 @@ export const questions: Question[] = [
       "Runs in parallel",
     ],
     correctAnswer: 1,
+    explanation:
+      "In traditional subprogram calls, the caller's execution is suspended until the called subprogram completes and returns control. The call semantics involve saving the caller's state and transferring control.",
   },
   {
     id: "l12-11",
@@ -3280,6 +3786,8 @@ export const questions: Question[] = [
       "A random location",
     ],
     correctAnswer: 1,
+    explanation:
+      "Control always returns to the caller after a subprogram completes execution. The return address is stored in the activation record to enable this.",
   },
   {
     id: "l12-12",
@@ -3294,6 +3802,8 @@ export const questions: Question[] = [
       "Arrays and lists",
     ],
     correctAnswer: 1,
+    explanation:
+      "The two fundamental kinds of subprograms are procedures and functions. Procedures perform actions but don't return values; functions are modeled after mathematical functions and produce return values.",
   },
   {
     id: "l12-13",
@@ -3308,6 +3818,8 @@ export const questions: Question[] = [
       "Are the same as variables",
     ],
     correctAnswer: 1,
+    explanation:
+      "Procedures are subprograms that perform actions (side effects) but do not return values. They are called as statements rather than used in expressions. Functions, by contrast, return values.",
   },
   {
     id: "l12-14",
@@ -3317,6 +3829,8 @@ export const questions: Question[] = [
     question:
       "Functions return a value and are modeled after mathematical functions.",
     correctAnswer: true,
+    explanation:
+      "Functions are designed to produce results (return values) and are modeled after mathematical functions. Unlike procedures, they can be used in expressions where their return value is needed.",
   },
   {
     id: "l12-15",
@@ -3331,6 +3845,8 @@ export const questions: Question[] = [
       "Only return type",
     ],
     correctAnswer: 1,
+    explanation:
+      "A subprogram definition includes both the interface (header with name, parameters, return type) and the body (the actual code/actions). The definition provides the complete implementation.",
   },
   {
     id: "l12-16",
@@ -3345,6 +3861,8 @@ export const questions: Question[] = [
       "Memory allocation",
     ],
     correctAnswer: 1,
+    explanation:
+      "A subprogram declaration (also called a prototype in C/C++) provides the interface information (parameter types and return type) but not the body. It allows the subprogram to be called before its definition.",
   },
   {
     id: "l12-17",
@@ -3359,6 +3877,8 @@ export const questions: Question[] = [
       "Function pointers",
     ],
     correctAnswer: 1,
+    explanation:
+      "In C/C++, subprogram declarations are called function prototypes. They provide the name, parameter types, and return type but not the body. Prototypes allow forward references and separate compilation.",
   },
   {
     id: "l12-18",
@@ -3367,6 +3887,8 @@ export const questions: Question[] = [
     source: "Lecture 12",
     question: "Pass-by-value transmits the value itself to the subprogram.",
     correctAnswer: true,
+    explanation:
+      "Pass-by-value transmits a copy of the actual parameter's value to the formal parameter. Changes to the formal parameter do not affect the actual parameter since only a copy was passed.",
   },
   {
     id: "l12-19",
@@ -3381,6 +3903,8 @@ export const questions: Question[] = [
       "Nothing",
     ],
     correctAnswer: 1,
+    explanation:
+      "Pass-by-reference transmits an access path (memory address) to the actual parameter. Changes to the formal parameter affect the actual parameter directly since they share the same memory location.",
   },
   {
     id: "l12-20",
@@ -3395,6 +3919,8 @@ export const questions: Question[] = [
       "Constant parameters",
     ],
     correctAnswer: 1,
+    explanation:
+      "Pass-by-value-result is an implementation model for in-out parameters. It copies the value in at call time (in mode) and copies it back out at return time (out mode), hence 'in-out'.",
   },
   {
     id: "l12-21",
@@ -3403,6 +3929,8 @@ export const questions: Question[] = [
     source: "Lecture 12",
     question: "A generic subprogram takes types as parameters.",
     correctAnswer: true,
+    explanation:
+      "Generic subprograms (templates in C++, generics in Java) take types as parameters, enabling the same code to work with different types. This is parametric polymorphism.",
   },
   {
     id: "l12-22",
@@ -3417,6 +3945,8 @@ export const questions: Question[] = [
       "The source code",
     ],
     correctAnswer: 1,
+    explanation:
+      "An activation record contains the format/layout of the non-code part of an executing subprogram: local variables, parameters, return address, dynamic link, and temporary storage for expression evaluation.",
   },
   {
     id: "l12-23",
@@ -3431,6 +3961,8 @@ export const questions: Question[] = [
       "Are always global",
     ],
     correctAnswer: 1,
+    explanation:
+      "Static local variables retain their values between subprogram calls because they are allocated in static memory before execution begins, not on the stack. They persist throughout program execution.",
   },
   {
     id: "l12-24",
@@ -3445,6 +3977,8 @@ export const questions: Question[] = [
       "Only one parameter",
     ],
     correctAnswer: 1,
+    explanation:
+      "A coroutine has multiple entry points, allowing it to suspend execution and resume from where it left off. This differs from regular subprograms which always start from the beginning.",
   },
   {
     id: "l12-25",
@@ -3454,6 +3988,8 @@ export const questions: Question[] = [
     question:
       "Babbage's Analytical Engine in the 1840s supported instruction reuse.",
     correctAnswer: true,
+    explanation:
+      "The concept of subprograms/procedures dates back to Babbage's Analytical Engine in the 1840s which supported instruction reuse. This historical foundation led to modern subprogram concepts.",
   },
   {
     id: "l12-26",
@@ -3468,6 +4004,8 @@ export const questions: Question[] = [
       "Only for data storage",
     ],
     correctAnswer: 1,
+    explanation:
+      "Methods in OOP languages are closely related to subprograms but are associated with classes/objects. They have an implicit 'this' or 'self' parameter and can access the object's state.",
   },
   {
     id: "l12-27",
@@ -3482,6 +4020,8 @@ export const questions: Question[] = [
       "Result",
     ],
     correctAnswer: 1,
+    explanation:
+      "In Java, primitives are passed by value (copy), while object references are also passed by value - but since the value is a reference, changes to the object are visible to the caller (effectively pass-by-reference for objects).",
   },
   {
     id: "l12-28",
@@ -3491,6 +4031,8 @@ export const questions: Question[] = [
     question:
       "Subprograms improve code readability and reduce code duplication.",
     correctAnswer: true,
+    explanation:
+      "Subprograms improve code readability by providing named abstractions for computations. They reduce code duplication (DRY principle) by allowing the same code to be called from multiple places.",
   },
   {
     id: "l12-29",
@@ -3505,6 +4047,8 @@ export const questions: Question[] = [
       "Only comments",
     ],
     correctAnswer: 1,
+    explanation:
+      "A subprogram header includes the name, the kind/type (procedure or function), and the formal parameters. For functions, it also includes the return type. This forms the subprogram's interface.",
   },
   {
     id: "l12-30",
@@ -3520,6 +4064,8 @@ export const questions: Question[] = [
       "The entire program state",
     ],
     correctAnswer: 1,
+    explanation:
+      "Return semantics include: transferring control back to the caller, copying out pass-by-value-result parameters, and returning any function value. The activation record is popped from the stack.",
   },
 
   // --- Additional Practice Questions to reach 100+ count ---
