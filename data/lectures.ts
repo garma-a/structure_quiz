@@ -68,3 +68,28 @@ export const lectures: Lecture[] = [
     questionCount: 34,
   },
 ];
+
+// Ethics and Society in IT - Lectures
+export const ethicsLectures: Lecture[] = [
+  {
+    id: "ethics-ch1",
+    title: "Ch1: Catalysts for Change",
+    description:
+      "Information Age, Computing & Networking Milestones, IT Issues",
+    questionCount: 65,
+  },
+  {
+    id: "ethics-ch2",
+    title: "Ch2: Introduction to Ethics",
+    description:
+      "Ethical Theories, Kantianism, Utilitarianism, Social Contract, Virtue Ethics",
+    questionCount: 65,
+  },
+  {
+    id: "ethics-ch3",
+    title: "Ch3: Networking",
+    description:
+      "Spam, Censorship, Freedom of Expression, Privacy, Cyberbullying",
+    questionCount: 65,
+  },
+];

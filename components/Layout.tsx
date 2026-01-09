@@ -35,7 +35,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
       <header className="bg-emerald-600 dark:bg-emerald-700 text-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold tracking-tight">
-            Structure of Programming Language Quizzes
+            Term 7 Final Revision
           </h1>
           <div className="flex items-center gap-4 text-sm font-medium">
             <span className="opacity-90">Prepare for Finals</span>
